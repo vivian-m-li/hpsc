@@ -3,13 +3,14 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=vili4418@colorado.edu
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
+#SBATCH --ntasks=4
 #SBATCH --time=00:10:00
-#SBATCH --partition=acompile
+#SBATCH --partition=atesting
 #SBATCH --output=lab00-%j.out
 
 module purge
-module load gcc/11.2.0
-module load openmpi/4.1.1
+module load gcc/10.3 openmpi
 
-mpirun -n 4 ./main.exe # run the compiled program on 4 processors
+export SLURM_EXPORT_ENV=ALL
+
+mpirun -np $SLURM_NTASKS /home/vili4418/hpsc/lab00/main.exe > output.txt
