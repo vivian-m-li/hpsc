@@ -1,5 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=lab00
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=vili4418@colorado.edu
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --time=00:10:00
