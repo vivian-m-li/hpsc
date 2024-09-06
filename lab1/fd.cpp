@@ -153,10 +153,10 @@ class LaplacianOnGrid {
           A[p][p] = -2. / dx2 - 2. / dy2 - 2. / dz2;  // cell in the center
           A[p][pid(i - 1, j, k)] = 1. / dx2;          // east
           A[p][pid(i + 1, j, k)] = 1. / dx2;          // west
-          A[p][pid(i, j - 1, k)] = 1. / dy2;          // south
-          A[p][pid(i, j + 1, k)] = 1. / dy2;          // north
-          A[p][pid(i, j, k - 1)] = 1. / dz2;          // bottom
-          A[p][pid(i, j, k + 1)] = 1. / dz2;          // top
+          A[p][pid(i, j - 1, k)] = 1. / dx2;          // south
+          A[p][pid(i, j + 1, k)] = 1. / dx2;          // north
+          A[p][pid(i, j, k - 1)] = 1. / dx2;          // bottom
+          A[p][pid(i, j, k + 1)] = 1. / dx2;          // top
         }
   }
 
