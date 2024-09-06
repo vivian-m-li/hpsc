@@ -97,11 +97,14 @@ class LaplacianOnGrid {
 
     // Boundary Conditions
 
+    // east
     kLOOP jLOOP {
       int r = pid(1, j, k);
       A[r][r] = 1.;
       b[r] = bcs[1];
     }
+
+    // west
     kLOOP jLOOP {
       int r = pid(ncell_x, j, k);
       A[r][r] = 1.;
@@ -112,21 +115,28 @@ class LaplacianOnGrid {
     // south-north sides (j = 0 and j = ncell_y)
     //          and for the bottom-top sides (k = 0 and k = ncell_z)
 
+    // south
     iLOOP kLOOP {
       int r = pid(i, 1, k);
       A[r][r] = 1.;
       b[r] = bcs[3];
     }
+
+    // north
     iLOOP kLOOP {
       int r = pid(i, ncell_y, k);
       A[r][r] = 1.;
       b[r] = bcs[4];
     }
+
+    // bottom
     iLOOP jLOOP {
       int r = pid(i, j, 1);
       A[r][r] = 1.;
       b[r] = bcs[5];
     }
+
+    // top
     iLOOP jLOOP {
       int r = pid(i, j, ncell_z);
       A[r][r] = 1.;
@@ -141,12 +151,12 @@ class LaplacianOnGrid {
           // In Lab : Complete the formation of row p of the matrix, for
           //          interior cell at location i,j,k.
           A[p][p] = -2. / dx2 - 2. / dy2 - 2. / dz2;  // cell in the center
-          A[p][pid(i - 1, j, k)] = 1. / dx2;          // cell to the left
-          A[p][pid(i + 1, j, k)] = 1. / dx2;          // cell to the right
-          A[p][pid(i, j - 1, k)] = 1. / dy2;          // cell below
-          A[p][pid(i, j + 1, k)] = 1. / dy2;          // cell above
-          A[p][pid(i, j, k - 1)] = 1. / dz2;          // cell in back
-          A[p][pid(i, j, k + 1)] = 1. / dz2;          // cell in front
+          A[p][pid(i - 1, j, k)] = 1. / dx2;          // east
+          A[p][pid(i + 1, j, k)] = 1. / dx2;          // west
+          A[p][pid(i, j - 1, k)] = 1. / dy2;          // south
+          A[p][pid(i, j + 1, k)] = 1. / dy2;          // north
+          A[p][pid(i, j, k - 1)] = 1. / dz2;          // bottom
+          A[p][pid(i, j, k + 1)] = 1. / dz2;          // top
         }
   }
 
@@ -195,10 +205,10 @@ int main(int argc, char *argv[]) {
   double bcs[7];
   bcs[1] = 1.;
   bcs[2] = -1.;
-  bcs[2] = 1.;
-  bcs[3] = -1.;
-  bcs[4] = 1.;
+  bcs[3] = 1.;
   bcs[4] = -1.;
+  bcs[5] = 1.;
+  bcs[6] = -1.;
 
   // Parse command-line options
 
@@ -209,12 +219,12 @@ int main(int argc, char *argv[]) {
     if (!strcmp(argv[count], "-lenx")) lenx = atoi(argv[count + 1]);
     if (!strcmp(argv[count], "-leny")) leny = atoi(argv[count + 1]);
     if (!strcmp(argv[count], "-lenz")) lenz = atoi(argv[count + 1]);
-    if (!strcmp(argv[count], "-bce")) bcs[1] = atoi(argv[count + 1]);
-    if (!strcmp(argv[count], "-bcw")) bcs[2] = atoi(argv[count + 1]);
-    if (!strcmp(argv[count], "-bcs")) bcs[3] = atoi(argv[count + 1]);
-    if (!strcmp(argv[count], "-bcn")) bcs[4] = atoi(argv[count + 1]);
-    if (!strcmp(argv[count], "-bcb")) bcs[5] = atoi(argv[count + 1]);
-    if (!strcmp(argv[count], "-bct")) bcs[6] = atoi(argv[count + 1]);
+    if (!strcmp(argv[count], "-bce")) bcs[1] = atoi(argv[count + 1]);  // east
+    if (!strcmp(argv[count], "-bcw")) bcs[2] = atoi(argv[count + 1]);  // west
+    if (!strcmp(argv[count], "-bcs")) bcs[3] = atoi(argv[count + 1]);  // south
+    if (!strcmp(argv[count], "-bcn")) bcs[4] = atoi(argv[count + 1]);  // north
+    if (!strcmp(argv[count], "-bcb")) bcs[5] = atoi(argv[count + 1]);  // back
+    if (!strcmp(argv[count], "-bct")) bcs[6] = atoi(argv[count + 1]);  // top
   }
 
   // Set up LaplaciaOnGrid object
