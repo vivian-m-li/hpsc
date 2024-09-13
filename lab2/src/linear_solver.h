@@ -25,7 +25,6 @@
 //  ||  system:  A*Solution = RHS
 //  ||
 //  ==
-// #include "mpiInfo.h"
 
 void SolveLinearSystem(int max_iter, VD RHS, VD &Solution, mpiInfo &myMPI) {
   int converged, it_converged;
@@ -61,7 +60,7 @@ void SolveLinearSystem(int max_iter, VD RHS, VD &Solution, mpiInfo &myMPI) {
 
     // TO-DO in Lab:  Activate --> myMPI.ExchangeBoundaryInfo(  /* TO-DO in Lab
     // */  );
-    ExchangeBoundaryInfo(&Solution, &SolutionNew);
+    myMPI.ExchangeBoundaryInfo(Solution, SolutionNew);
 
     // ----------------------------------------------
     // (2) Convergence

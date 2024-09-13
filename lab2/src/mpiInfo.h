@@ -158,23 +158,24 @@ class mpiInfo {
     //       MPI_Request* request);
 
     if (nei_n >= 0)
-      err = MPI_Isend(
-          &phiSend_n, nRealx + 2, MPI_DOUBLE, nei_n, 0, MPI_COMM_WORLD,
-          &request);  // send the row of phi values (phiSend_n) of length nRealx
-                      // + 2 (real + ghost cells) to the north
+      err = MPI_Isend(phiSend_n, countx, MPI_DOUBLE, nei_n, tag, MPI_COMM_WORLD,
+                      &request);  // send the row of phi values (phiSend_n) of
+                                  // length nRealx
+                                  // + 2 (real + ghost cells) to the north
     if (nei_s >= 0)
-      err = MPI_Isend(&phiSend_s, nRealx + 2, MPI_DOUBLE, nei_s, 0,
-                      MPI_COMM_WORLD, &request);
+      err = MPI_Isend(phiSend_s, countx, MPI_DOUBLE, nei_s, tag, MPI_COMM_WORLD,
+                      &request);
     if (nei_e >= 0)
-      err = MPI_Isend(&phiSend_e, nRealy + 2, MPI_DOUBLE, nei_e, 0,
-                      MPI_COMM_WORLD, &request);
+      err = MPI_Isend(phiSend_e, county, MPI_DOUBLE, nei_e, tag, MPI_COMM_WORLD,
+                      &request);
     if (nei_w >= 0)
-      err = MPI_Isend(&phiSend_w, nRealy + 2, MPI_DOUBLE, nei_w, 0,
-                      MPI_COMM_WORLD, &request);
+      err = MPI_Isend(phiSend_w, county, MPI_DOUBLE, nei_w, tag, MPI_COMM_WORLD,
+                      &request);
 
     // (1.3) Receive values from neighboring PEs' physical boundaries.
 
-    // int MPI_Irecv(void* buffer,
+    // int MPI_Irecv(
+    //           void* buffer,
     //           int count,
     //           MPI_Datatype datatype,
     //           int sender,
@@ -183,23 +184,23 @@ class mpiInfo {
     //           MPI_Request* request);
 
     if (nei_n >= 0) {
-      err = MPI_Irecv(&phiRecv_n, nRealx + 2, MPI_DOUBLE, nei_n, 0,
-                      MPI_COMM_WORLD, &request);
+      err = MPI_Irecv(phiRecv_n, countx, MPI_DOUBLE, nei_n, tag, MPI_COMM_WORLD,
+                      &request);
       MPI_Wait(&request, &status);
     }
     if (nei_s >= 0) {
-      err = MPI_Irecv(&phiRecv_s, nRealx + 2, MPI_DOUBLE, nei_s, 0,
-                      MPI_COMM_WORLD, &request);
+      err = MPI_Irecv(phiRecv_s, countx, MPI_DOUBLE, nei_s, tag, MPI_COMM_WORLD,
+                      &request);
       MPI_Wait(&request, &status);
     }
     if (nei_e >= 0) {
-      err = MPI_Irecv(&phiRecv_e, nRealy + 2, MPI_DOUBLE, nei_e, 0,
-                      MPI_COMM_WORLD, &request);
+      err = MPI_Irecv(phiRecv_e, county, MPI_DOUBLE, nei_e, tag, MPI_COMM_WORLD,
+                      &request);
       MPI_Wait(&request, &status);
     }
     if (nei_w >= 0) {
-      err = MPI_Irecv(&phiRecv_w, nRealy + 2, MPI_DOUBLE, nei_w, 0,
-                      MPI_COMM_WORLD, &request);
+      err = MPI_Irecv(phiRecv_w, county, MPI_DOUBLE, nei_w, tag, MPI_COMM_WORLD,
+                      &request);
       MPI_Wait(&request, &status);
     }
 
