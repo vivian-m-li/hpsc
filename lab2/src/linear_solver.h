@@ -60,7 +60,9 @@ void SolveLinearSystem(int max_iter, VD RHS, VD &Solution, mpiInfo &myMPI) {
 
     // TO-DO in Lab:  Activate --> myMPI.ExchangeBoundaryInfo(  /* TO-DO in Lab
     // */  );
-    myMPI.ExchangeBoundaryInfo(Solution, SolutionNew);
+    myMPI.ExchangeBoundaryInfo(Solution,
+                               b);  // Solution has the current results from the
+    // iteration and b is what we need to update
 
     // ----------------------------------------------
     // (2) Convergence

@@ -4,6 +4,12 @@ void Exit() {
   exit(0);
 }
 
+void printArray(string arrayName, int n, int *array, int myPE) {
+  for (int i = 0; i < n; ++i)
+    cout << "myPE: " << myPE << " " << arrayName << "[" << i
+         << "] = " << array[i] << endl;
+}
+
 //  ==
 //  ||
 //  ||   C L A S S:    m p i I n f o
@@ -141,10 +147,11 @@ class mpiInfo {
 
     // (1.1) Put values into communication arrays
 
-    sLOOP phiSend_n[s] = Solution[s];
-    sLOOP phiSend_s[s] = Solution[s];
-    tLOOP phiSend_w[t] = Solution[t];
-    tLOOP phiSend_e[t] = Solution[t];
+    // only send the values of the real cells, not the ghost cells
+    sLOOP phiSend_n[s] = Solution[pid(s, nRealy)];
+    sLOOP phiSend_s[s] = Solution[pid(s, 1)];
+    tLOOP phiSend_e[t] = Solution[pid(nRealx, t)];
+    tLOOP phiSend_w[t] = Solution[pid(1, t)];
 
     // (1.2) Send them to neighboring PEs
 
@@ -168,9 +175,10 @@ class mpiInfo {
     if (nei_e >= 0)
       err = MPI_Isend(phiSend_e, county, MPI_DOUBLE, nei_e, tag, MPI_COMM_WORLD,
                       &request);
-    if (nei_w >= 0)
+    if (nei_w >= 0) {
       err = MPI_Isend(phiSend_w, county, MPI_DOUBLE, nei_w, tag, MPI_COMM_WORLD,
                       &request);
+    }
 
     // (1.3) Receive values from neighboring PEs' physical boundaries.
 
@@ -206,11 +214,11 @@ class mpiInfo {
 
     // (1.4) Update BCs using the exchanged information
 
-    if (nei_n >= 0)
-      sLOOP b[pid(s, nRealy)] = phiRecv_n[s];  // update the entire top row
-    if (nei_s >= 0) sLOOP b[pid(s, 1)] = phiRecv_s[s];
-    if (nei_e >= 0) tLOOP b[pid(nRealx, t)] = phiRecv_e[t];
-    if (nei_w >= 0) tLOOP b[pid(1, t)] = phiRecv_w[t];
+    // update all values, including ghost cells
+    if (nei_n >= 0) sLOOP b[pid(s, nRealy + 1)] = phiRecv_n[s];
+    if (nei_s >= 0) sLOOP b[pid(s, 0)] = phiRecv_s[s];
+    if (nei_e >= 0) tLOOP b[pid(nRealx + 1, t)] = phiRecv_e[t];
+    if (nei_w >= 0) tLOOP b[pid(0, t)] = phiRecv_w[t];
   }
 
   int pid(int i, int j) { return (i + 1) + (j) * (nRealx + 2); }
