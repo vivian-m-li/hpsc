@@ -23,7 +23,7 @@
 
 #include "mpi.h"
 #include "mpiInfo.h"
-#include "particles.h"
+// #include "particles.h"
 
 // ==
 // ||
@@ -143,15 +143,21 @@ class Mesh {
         iPEnew = myMPI.iPE;
         jPEnew = myMPI.jPE;
 
-        if (PTCL.x[k] < x0) {
+        if (PTCL.x[k] < x0) {  // leaving the left boundary
           PTCL.active[k] = -1;
           iPEnew = myMPI.iPE - 1;
         }
-        if (PTCL.x[k] > x1) { /* TO-DO in Lab */
+        if (PTCL.x[k] > x1) {  // leaving the right boundary
+          PTCL.active[k] = -1;
+          iPEnew = myMPI.iPE + 1;
         }
-        if (PTCL.y[k] < y0) { /* TO-DO in Lab */
+        if (PTCL.y[k] < y0) {  // leaving the bottom boundary
+          PTCL.active[k] = -1;
+          jPEnew = myMPI.jPE - 1;
         }
-        if (PTCL.y[k] > y1) { /* TO-DO in Lab */
+        if (PTCL.y[k] > y1) {  // leaving the top boundary
+          PTCL.active[k] = -1;
+          jPEnew = myMPI.jPE + 1;
         }
       }
 
@@ -159,10 +165,14 @@ class Mesh {
       // array that will be sent to the neighboring processor.
 
       if (PTCL.active[k] == -1) {
-        if (iPEnew >= 0 && iPEnew < myMPI.nPEx)
+        if (iPEnew >= 0 && iPEnew < myMPI.nPEx)  // if our new PE is in the
+                                                 // boundaries of our total mesh
           if (jPEnew >= 0 && jPEnew < myMPI.nPEy) {
             ptcl_send_list.push_back(k);
-            ptcl_send_PE.push_back(/* TO-DO in Lab */);
+            ptcl_send_PE.push_back(
+                iPEnew +
+                (jPEnew * myMPI.nPEx));  // calculate which PE it needs
+                                         // to go to based on iPE and jPE
           }
 
         PTCL.active[k] = 0;  // Remove it from the list of active particles

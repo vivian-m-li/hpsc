@@ -5,6 +5,8 @@
 //  ||
 //  ==
 
+#include "particles.h"
+
 class mpiInfo {
  public:
   int myPE;
@@ -105,10 +107,51 @@ class mpiInfo {
 
     nei_nw = nei_sw = nei_ne = nei_se = -1;
 
-    if (iPE > 0 && jPE > 0) nei_sw = /* TO-DO in Lab */;
-    if (iPE < nPEx - 1 && jPE > 0) nei_se = /* TO-DO in Lab */;
-    if (iPE > 0 && jPE < nPEy - 1) nei_nw = /* TO-DO in Lab */;
-    if (iPE < nPEx - 1 && jPE < nPEy - 1) nei_ne = /* TO-DO in Lab */;
+    if (iPE > 0 && jPE > 0)
+      nei_sw = myPE - nPEx -
+               1;  // subtract a row (to move south) and 1 PE (to move west)
+    if (iPE < nPEx - 1 && jPE > 0)
+      nei_se = myPE - nPEx +
+               1;  // subtract a row (to move south) and add 1 PE (to move east)
+    if (iPE > 0 && jPE < nPEy - 1)
+      nei_nw = myPE + nPEx -
+               1;  // add a row (to move north) and subtract 1 PE (to move west)
+    if (iPE < nPEx - 1 && jPE < nPEy - 1)
+      nei_ne =
+          myPE + nPEx + 1;  // add a row (to move north) and 1 PE (to move east)
+
+    // DEBUGGING CODE to figure if out we're setting the neighbors correctly
+    int rank;
+
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+    std::string filename = "neighbors_rank_" + std::to_string(rank) + ".dat";
+
+    std::ofstream file;
+
+    file.open(filename, std::ios::out | std::ios::trunc);
+
+    if (file.is_open()) {
+      // file << "Rank = " << rank << std::endl;
+
+      // file << "North neighbor: " << nei_n << std::endl;
+
+      // file << "South neighbor: " << nei_s << std::endl;
+
+      // file << "East  neighbor: " << nei_e << std::endl;
+
+      // file << "West  neighbor: " << nei_w << std::endl;
+
+      file << "North East neighbor: " << nei_ne << std::endl;
+
+      file << "North West neighbor: " << nei_nw << std::endl;
+
+      file << "South West neighbor: " << nei_sw << std::endl;
+
+      file << "South East neighbor: " << nei_se << std::endl;
+
+      file.close();
+    }
 
     // Acquire memory for the communication between adjacent processors:
     countx = nRealx + 2;
@@ -140,33 +183,49 @@ class mpiInfo {
   //  ||
   //  ==
 
+  // Segmentation fault: ACCESSING MEMORY UNALLOCATED
+  // When we send an array, MPI already sends the address so we send the object
+  // (no &), whereas when we send a value (e.g an int/double), we send the
+  // address
   void ParticleExchange(VI &ptcl_send_list, VI &ptcl_send_PE, particles &PTCL) {
     MPI_Status status;
     MPI_Request request;
 
     // (1) Get the max number particles to be sent by any particular processor,
-    // and make sure all processors  know that number.
+    // and make sure all processors know that number.
 
     int numToSend = ptcl_send_list.size();
     int maxToSend;
 
-    MPI_Iallreduce(/* TO-DO in Lab */, /* TO-DO in Lab */, 1, MPI_INT,
-                   /* TO-DO in Lab */, MPI_COMM_WORLD, &request);
+    /*
+    int MPI_Iallreduce(
+                   const void* send_buffer,
+                   void* receive_buffer,
+                   int count,
+                   MPI_Datatype datatype,
+                   MPI_Op operation,
+                   MPI_Comm communicator,
+                   MPI_Request* request);
+    */
+    MPI_Iallreduce(&numToSend, &maxToSend, 1, MPI_INT, MPI_MAX, MPI_COMM_WORLD,
+                   &request);
     MPI_Wait(&request, &status);
 
     // (2) Allocate contributions to the upcoming Gather operation.  Here, "C"
     // for "Contribution" to be Gathered
 
+    // For each of these vectors, allocate enough space for the max number of
+    // particles sent
     int *Cptcl_PE;
-    Cptcl_PE = new int[/* TO-DO in Lab */];  // Particles' destination PEs
+    Cptcl_PE = new int[maxToSend];  // Particles' destination PEs
     double *Cptcl_x;
-    Cptcl_x = new double[/* TO-DO in Lab */];
+    Cptcl_x = new double[maxToSend];
     double *Cptcl_y;
-    Cptcl_y = new double[/* TO-DO in Lab */];
+    Cptcl_y = new double[maxToSend];
     double *Cptcl_vx;
-    Cptcl_vx = new double[/* TO-DO in Lab */];
+    Cptcl_vx = new double[maxToSend];
     double *Cptcl_vy;
-    Cptcl_vy = new double[/* TO-DO in Lab */];
+    Cptcl_vy = new double[maxToSend];
 
     // (3) Populate contributions on all processors for the upcoming Gather
     // operation
@@ -183,12 +242,12 @@ class mpiInfo {
     // processors will have left-over space in the C* arrays.
 
     for (int i = 0; i < ptcl_send_list.size(); ++i) {
-      int id = ptcl_send_list[/* TO-DO in Lab */];
-      Cptcl_PE[i] = ptcl_send_PE[/* TO-DO in Lab */];
-      Cptcl_x[i] = PTCL.x[/* TO-DO in Lab */];
-      Cptcl_y[i] = PTCL.y[/* TO-DO in Lab */];
-      Cptcl_vx[i] = PTCL.vx[/* TO-DO in Lab */];
-      Cptcl_vy[i] = PTCL.vy[/* TO-DO in Lab */];
+      int id = ptcl_send_list[i];
+      Cptcl_PE[i] = ptcl_send_PE[i];
+      Cptcl_x[i] = PTCL.x[id];
+      Cptcl_y[i] = PTCL.y[id];
+      Cptcl_vx[i] = PTCL.vx[id];
+      Cptcl_vy[i] = PTCL.vy[id];
     }
 
     // (5) Allocate and initialize the arrays for upcoming Gather operation to
@@ -202,18 +261,18 @@ class mpiInfo {
     //     +------------------+------------------+------------------+------------------+
     //             PE0               PE1                PE2               PE3
 
-    int sizeOfGather = /* TO-DO in Lab */;
+    int sizeOfGather = maxToSend * numPE;  // per the diagram
 
     int *Gptcl_PE;
-    Gptcl_PE = new int[/* TO-DO in Lab */];
+    Gptcl_PE = new int[sizeOfGather];
     double *Gptcl_x;
-    Gptcl_x = new double[/* TO-DO in Lab */];
+    Gptcl_x = new double[sizeOfGather];
     double *Gptcl_y;
-    Gptcl_y = new double[/* TO-DO in Lab */];
+    Gptcl_y = new double[sizeOfGather];
     double *Gptcl_vx;
-    Gptcl_vx = new double[/* TO-DO in Lab */];
+    Gptcl_vx = new double[sizeOfGather];
     double *Gptcl_vy;
-    Gptcl_vy = new double[/* TO-DO in Lab */];
+    Gptcl_vy = new double[sizeOfGather];
 
     for (int i = 0; i < sizeOfGather; ++i) {
       Gptcl_PE[i] = -1;
@@ -229,16 +288,31 @@ class mpiInfo {
 
     MPI_Barrier(MPI_COMM_WORLD);
 
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    /*
+    int MPI_Iallgather(
+                   const void* buffer_send,
+                   int count_send,
+                   MPI_Datatype datatype_send,
+                   void* buffer_recv,
+                   int count_recv,
+                   MPI_Datatype datatype_recv,
+                   MPI_Comm communicator,
+                   MPI_Request* request);
+    */
+    MPI_Iallgather(Cptcl_PE, maxToSend, MPI_INT, Gptcl_PE, maxToSend, MPI_INT,
+                   MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    MPI_Iallgather(Cptcl_x, maxToSend, MPI_DOUBLE, Gptcl_x, maxToSend,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    MPI_Iallgather(Cptcl_y, maxToSend, MPI_DOUBLE, Gptcl_y, maxToSend,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    MPI_Iallgather(Cptcl_vx, maxToSend, MPI_DOUBLE, Gptcl_vx, maxToSend,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
-    MPI_Wait(&request, &status);
+    MPI_Iallgather(Cptcl_vy, maxToSend, MPI_DOUBLE, Gptcl_vy, maxToSend,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
 
     MPI_Barrier(MPI_COMM_WORLD);
 
@@ -246,7 +320,7 @@ class mpiInfo {
     // 1-based.
 
     int Np = 0;
-    for (int i = 0; i < /*  TO-DO in Lab */; ++i)
+    for (int i = 0; i < sizeOfGather; ++i)
       if (Gptcl_PE[i] == myPE) ++Np;
 
     VD std_add_x;
@@ -260,15 +334,17 @@ class mpiInfo {
 
     int count = 1;
     for (int i = 0; i < sizeOfGather; ++i)
-      if (Gptcl_PE[i] == /* TO-DO in Lab */) {
-        std_add_x[/* TO-DO in Lab */] = Gptcl_x[i];
-        std_add_y[/* TO-DO in Lab */] = Gptcl_y[i];
-        std_add_vx[/* TO-DO in Lab */] = Gptcl_vx[i];
-        std_add_vy[/* TO-DO in Lab */] = Gptcl_vy[i];
-        /* TO-DO in Lab */;
+      if (Gptcl_PE[i] == myPE) {  // these are the particles we want to receive
+                                  // from the other PEs
+        std_add_x[count] = Gptcl_x[i];
+        std_add_y[count] = Gptcl_y[i];
+        std_add_vx[count] = Gptcl_vx[i];
+        std_add_vy[count] = Gptcl_vy[i];
+        ++count;
       }
 
-    PTCL.add(/* TO-DO in Lab */);
+    // Add these particles to the list of particles in the PTCL object
+    PTCL.add(std_add_x, std_add_y, std_add_vx, std_add_vy);
 
     // (8) Free up memory
 

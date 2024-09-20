@@ -19,6 +19,8 @@
 //  || ||
 //  ================================================================================
 
+#include <mpi.h>
+
 #include <cstdlib>
 #include <fstream>
 #include <iomanip>
