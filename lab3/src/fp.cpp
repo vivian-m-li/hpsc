@@ -143,15 +143,21 @@ class Mesh {
         iPEnew = myMPI.iPE;
         jPEnew = myMPI.jPE;
 
-        if (PTCL.x[k] < x0) {
+        if (PTCL.x[k] < x0) {  // leaving the left boundary
           PTCL.active[k] = -1;
           iPEnew = myMPI.iPE - 1;
         }
-        if (PTCL.x[k] > x1) { /* TO-DO in Lab */
+        if (PTCL.x[k] > x1) {  // leaving the right boundary
+          PTCL.active[k] = -1;
+          iPEnew = myMPI.iPE + 1;
         }
-        if (PTCL.y[k] < y0) { /* TO-DO in Lab */
+        if (PTCL.y[k] < y0) {  // leaving the bottom boundary
+          PTCL.active[k] = -1;
+          jPEnew = myMPI.jPE - 1;
         }
-        if (PTCL.y[k] > y1) { /* TO-DO in Lab */
+        if (PTCL.y[k] > y1) {  // leaving the top boundary
+          PTCL.active[k] = -1;
+          jPEnew = myMPI.jPE + 1;
         }
       }
 

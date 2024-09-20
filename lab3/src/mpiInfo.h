@@ -105,10 +105,18 @@ class mpiInfo {
 
     nei_nw = nei_sw = nei_ne = nei_se = -1;
 
-    if (iPE > 0 && jPE > 0) nei_sw = /* TO-DO in Lab */;
-    if (iPE < nPEx - 1 && jPE > 0) nei_se = /* TO-DO in Lab */;
-    if (iPE > 0 && jPE < nPEy - 1) nei_nw = /* TO-DO in Lab */;
-    if (iPE < nPEx - 1 && jPE < nPEy - 1) nei_ne = /* TO-DO in Lab */;
+    if (iPE > 0 && jPE > 0)
+      nei_sw = myPE - nPEx -
+               1;  // subtract a row (to move south) and 1 PE (to move west)
+    if (iPE < nPEx - 1 && jPE > 0)
+      nei_se = myPE - nPEx +
+               1;  // subtract a row (to move south) and add 1 PE (to move east)
+    if (iPE > 0 && jPE < nPEy - 1)
+      nei_nw = myPE + nPEx -
+               1;  // add a row (to move north) and subtract 1 PE (to move west)
+    if (iPE < nPEx - 1 && jPE < nPEy - 1)
+      nei_ne =
+          myPE + nPEx + 1;  // add a row (to move north) and 1 PE (to move east)
 
     // Acquire memory for the communication between adjacent processors:
     countx = nRealx + 2;
@@ -145,28 +153,40 @@ class mpiInfo {
     MPI_Request request;
 
     // (1) Get the max number particles to be sent by any particular processor,
-    // and make sure all processors  know that number.
+    // and make sure all processors know that number.
 
     int numToSend = ptcl_send_list.size();
     int maxToSend;
 
-    MPI_Iallreduce(/* TO-DO in Lab */, /* TO-DO in Lab */, 1, MPI_INT,
-                   /* TO-DO in Lab */, MPI_COMM_WORLD, &request);
+    /*
+    int MPI_Iallreduce(
+                   const void* send_buffer,
+                   void* receive_buffer,
+                   int count,
+                   MPI_Datatype datatype,
+                   MPI_Op operation,
+                   MPI_Comm communicator,
+                   MPI_Request* request);
+    */
+    MPI_Iallreduce(&numToSend, &maxToSend, 1, MPI_INT, MPI_MAX, MPI_COMM_WORLD,
+                   &request);
     MPI_Wait(&request, &status);
 
     // (2) Allocate contributions to the upcoming Gather operation.  Here, "C"
     // for "Contribution" to be Gathered
 
+    // For each of these vectors, allocate enough space for the max number of
+    // particles sent
     int *Cptcl_PE;
-    Cptcl_PE = new int[/* TO-DO in Lab */];  // Particles' destination PEs
+    Cptcl_PE = new int[maxToSend];  // Particles' destination PEs
     double *Cptcl_x;
-    Cptcl_x = new double[/* TO-DO in Lab */];
+    Cptcl_x = new double[maxToSend];
     double *Cptcl_y;
-    Cptcl_y = new double[/* TO-DO in Lab */];
+    Cptcl_y = new double[maxToSend];
     double *Cptcl_vx;
-    Cptcl_vx = new double[/* TO-DO in Lab */];
+    Cptcl_vx = new double[maxToSend];
     double *Cptcl_vy;
-    Cptcl_vy = new double[/* TO-DO in Lab */];
+    Cptcl_vy = new double[maxToSend];
 
     // (3) Populate contributions on all processors for the upcoming Gather
     // operation
@@ -183,12 +203,12 @@ class mpiInfo {
     // processors will have left-over space in the C* arrays.
 
     for (int i = 0; i < ptcl_send_list.size(); ++i) {
-      int id = ptcl_send_list[/* TO-DO in Lab */];
-      Cptcl_PE[i] = ptcl_send_PE[/* TO-DO in Lab */];
-      Cptcl_x[i] = PTCL.x[/* TO-DO in Lab */];
-      Cptcl_y[i] = PTCL.y[/* TO-DO in Lab */];
-      Cptcl_vx[i] = PTCL.vx[/* TO-DO in Lab */];
-      Cptcl_vy[i] = PTCL.vy[/* TO-DO in Lab */];
+      int id = ptcl_send_list[i];
+      Cptcl_PE[i] = ptcl_send_PE[i];
+      Cptcl_x[i] = PTCL.x[id];
+      Cptcl_y[i] = PTCL.y[id];
+      Cptcl_vx[i] = PTCL.vx[id];
+      Cptcl_vy[i] = PTCL.vy[id];
     }
 
     // (5) Allocate and initialize the arrays for upcoming Gather operation to
@@ -202,18 +222,18 @@ class mpiInfo {
     //     +------------------+------------------+------------------+------------------+
     //             PE0               PE1                PE2               PE3
 
-    int sizeOfGather = /* TO-DO in Lab */;
+    int sizeOfGather = maxToSend * numPE;  // per the diagram
 
     int *Gptcl_PE;
-    Gptcl_PE = new int[/* TO-DO in Lab */];
+    Gptcl_PE = new int[sizeOfGather];
     double *Gptcl_x;
-    Gptcl_x = new double[/* TO-DO in Lab */];
+    Gptcl_x = new double[sizeOfGather];
     double *Gptcl_y;
-    Gptcl_y = new double[/* TO-DO in Lab */];
+    Gptcl_y = new double[sizeOfGather];
     double *Gptcl_vx;
-    Gptcl_vx = new double[/* TO-DO in Lab */];
+    Gptcl_vx = new double[sizeOfGather];
     double *Gptcl_vy;
-    Gptcl_vy = new double[/* TO-DO in Lab */];
+    Gptcl_vy = new double[sizeOfGather];
 
     for (int i = 0; i < sizeOfGather; ++i) {
       Gptcl_PE[i] = -1;
@@ -229,15 +249,28 @@ class mpiInfo {
 
     MPI_Barrier(MPI_COMM_WORLD);
 
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    /*
+    int MPI_Iallgather(
+                   const void* buffer_send,
+                   int count_send,
+                   MPI_Datatype datatype_send,
+                   void* buffer_recv,
+                   int count_recv,
+                   MPI_Datatype datatype_recv,
+                   MPI_Comm communicator,
+                   MPI_Request* request);
+    */
+    MPI_Iallgather(&Gptcl_PE, sizeOfGather, MPI_INT, receive_buffer,
+                   sizeOfGather, MPI_INT, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    MPI_Iallgather(&Gptcl_x, sizeOfGather, MPI_DOUBLE, receive_buffer,
+                   sizeOfGather, MPI_DOUBLE, , &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    MPI_Iallgather(&Gptcl_y, 1, MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    MPI_Iallgather(&Gptcl_vx, 1, MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(/*  TO-DO in Lab */, &request);
+    MPI_Iallgather(&Gptcl_vy, 1, MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
 
     MPI_Barrier(MPI_COMM_WORLD);
