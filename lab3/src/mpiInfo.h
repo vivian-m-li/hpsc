@@ -5,6 +5,8 @@
 //  ||
 //  ==
 
+#include "particles.h"
+
 class mpiInfo {
  public:
   int myPE;
@@ -260,17 +262,20 @@ class mpiInfo {
                    MPI_Comm communicator,
                    MPI_Request* request);
     */
-    MPI_Iallgather(&Gptcl_PE, sizeOfGather, MPI_INT, receive_buffer,
-                   sizeOfGather, MPI_INT, MPI_COMM_WORLD, &request);
+    MPI_Iallgather(&Cptcl_PE, maxToSend, MPI_INT, &Gptcl_PE, sizeOfGather,
+                   MPI_INT, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Gptcl_x, sizeOfGather, MPI_DOUBLE, receive_buffer,
-                   sizeOfGather, MPI_DOUBLE, , &request);
+    MPI_Iallgather(&Cptcl_x, maxToSend, MPI_DOUBLE, &Gptcl_x, sizeOfGather,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Gptcl_y, 1, MPI_DOUBLE, MPI_COMM_WORLD, &request);
+    MPI_Iallgather(&Cptcl_y, maxToSend, MPI_DOUBLE, &Gptcl_y, sizeOfGather,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Gptcl_vx, 1, MPI_DOUBLE, MPI_COMM_WORLD, &request);
+    MPI_Iallgather(&Cptcl_vx, 1, MPI_DOUBLE, &Gptcl_vx, sizeOfGather,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Gptcl_vy, 1, MPI_DOUBLE, MPI_COMM_WORLD, &request);
+    MPI_Iallgather(&Cptcl_vy, 1, MPI_DOUBLE, &Gptcl_vy, sizeOfGather,
+                   MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
 
     MPI_Barrier(MPI_COMM_WORLD);
@@ -279,7 +284,7 @@ class mpiInfo {
     // 1-based.
 
     int Np = 0;
-    for (int i = 0; i < /*  TO-DO in Lab */; ++i)
+    for (int i = 0; i < sizeOfGather; ++i)
       if (Gptcl_PE[i] == myPE) ++Np;
 
     VD std_add_x;
@@ -293,15 +298,17 @@ class mpiInfo {
 
     int count = 1;
     for (int i = 0; i < sizeOfGather; ++i)
-      if (Gptcl_PE[i] == /* TO-DO in Lab */) {
-        std_add_x[/* TO-DO in Lab */] = Gptcl_x[i];
-        std_add_y[/* TO-DO in Lab */] = Gptcl_y[i];
-        std_add_vx[/* TO-DO in Lab */] = Gptcl_vx[i];
-        std_add_vy[/* TO-DO in Lab */] = Gptcl_vy[i];
-        /* TO-DO in Lab */;
+      if (Gptcl_PE[i] == myPE) {  // these are the particles we want to receive
+                                  // from the other PEs
+        std_add_x[count] = Gptcl_x[i];
+        std_add_y[count] = Gptcl_y[i];
+        std_add_vx[count] = Gptcl_vx[i];
+        std_add_vy[count] = Gptcl_vy[i];
+        ++count;
       }
 
-    PTCL.add(/* TO-DO in Lab */);
+    // Add these particles to the list of particles in the PTCL object
+    PTCL.add(std_add_x, std_add_y, std_add_vx, std_add_vy);
 
     // (8) Free up memory
 
