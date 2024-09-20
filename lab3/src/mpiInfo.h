@@ -120,6 +120,39 @@ class mpiInfo {
       nei_ne =
           myPE + nPEx + 1;  // add a row (to move north) and 1 PE (to move east)
 
+    // DEBUGGING CODE to figure if out we're setting the neighbors correctly
+    int rank;
+
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+    std::string filename = "neighbors_rank_" + std::to_string(rank) + ".dat";
+
+    std::ofstream file;
+
+    file.open(filename, std::ios::out | std::ios::trunc);
+
+    if (file.is_open()) {
+      // file << "Rank = " << rank << std::endl;
+
+      // file << "North neighbor: " << nei_n << std::endl;
+
+      // file << "South neighbor: " << nei_s << std::endl;
+
+      // file << "East  neighbor: " << nei_e << std::endl;
+
+      // file << "West  neighbor: " << nei_w << std::endl;
+
+      file << "North East neighbor: " << nei_ne << std::endl;
+
+      file << "North West neighbor: " << nei_nw << std::endl;
+
+      file << "South West neighbor: " << nei_sw << std::endl;
+
+      file << "South East neighbor: " << nei_se << std::endl;
+
+      file.close();
+    }
+
     // Acquire memory for the communication between adjacent processors:
     countx = nRealx + 2;
     county = nRealy + 2;
@@ -150,6 +183,10 @@ class mpiInfo {
   //  ||
   //  ==
 
+  // Segmentation fault: ACCESSING MEMORY UNALLOCATED
+  // When we send an array, MPI already sends the address so we send the object
+  // (no &), whereas when we send a value (e.g an int/double), we send the
+  // address
   void ParticleExchange(VI &ptcl_send_list, VI &ptcl_send_PE, particles &PTCL) {
     MPI_Status status;
     MPI_Request request;
@@ -262,21 +299,20 @@ class mpiInfo {
                    MPI_Comm communicator,
                    MPI_Request* request);
     */
-    MPI_Iallgather(&Cptcl_PE, maxToSend, MPI_INT, &Gptcl_PE, sizeOfGather,
-                   MPI_INT, MPI_COMM_WORLD, &request);
+    MPI_Iallgather(Cptcl_PE, maxToSend, MPI_INT, Gptcl_PE, maxToSend, MPI_INT,
+                   MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Cptcl_x, maxToSend, MPI_DOUBLE, &Gptcl_x, sizeOfGather,
+    MPI_Iallgather(Cptcl_x, maxToSend, MPI_DOUBLE, Gptcl_x, maxToSend,
                    MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Cptcl_y, maxToSend, MPI_DOUBLE, &Gptcl_y, sizeOfGather,
+    MPI_Iallgather(Cptcl_y, maxToSend, MPI_DOUBLE, Gptcl_y, maxToSend,
                    MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Cptcl_vx, 1, MPI_DOUBLE, &Gptcl_vx, sizeOfGather,
+    MPI_Iallgather(Cptcl_vx, maxToSend, MPI_DOUBLE, Gptcl_vx, maxToSend,
                    MPI_DOUBLE, MPI_COMM_WORLD, &request);
     MPI_Wait(&request, &status);
-    MPI_Iallgather(&Cptcl_vy, 1, MPI_DOUBLE, &Gptcl_vy, sizeOfGather,
+    MPI_Iallgather(Cptcl_vy, maxToSend, MPI_DOUBLE, Gptcl_vy, maxToSend,
                    MPI_DOUBLE, MPI_COMM_WORLD, &request);
-    MPI_Wait(&request, &status);
 
     MPI_Barrier(MPI_COMM_WORLD);
 
