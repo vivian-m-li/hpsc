@@ -1,3 +1,5 @@
+#include "fd.h"
+
 void Exit() {
   MPI_Barrier(MPI_COMM_WORLD);
   MPI_Finalize();

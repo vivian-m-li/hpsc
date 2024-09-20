@@ -1,3 +1,15 @@
+myPE: 1 x0 = 0.5
+myPE: 1 x1 = 1
+myPE: 1 y0 = 0
+myPE: 1 y1 = 0.5
+myPE: 3 x0 = 0.5
+myPE: 3 x1 = 1
+myPE: 3 y0 = 0.5
+myPE: 3 y1 = 1
+myPE: 2 x0 = 0
+myPE: 2 x1 = 0.5
+myPE: 2 y0 = 0.5
+myPE: 2 y1 = 1
 
 ---------------------------------------------
 
@@ -8,18 +20,6 @@
 
 ---------------------------------------------
 
-myPE: 1 x0 = 0.5
-myPE: 1 x1 = 1
-myPE: 1 y0 = 0
-myPE: 1 y1 = 0.5
-myPE: 2 x0 = 0
-myPE: 2 x1 = 0.5
-myPE: 2 y0 = 0.5
-myPE: 2 y1 = 1
-myPE: 3 x0 = 0.5
-myPE: 3 x1 = 1
-myPE: 3 y0 = 0.5
-myPE: 3 y1 = 1
 
 Input Summary: 
 --------------------------- 
@@ -40,7 +40,7 @@ Form Linear System:
 Solve Linear System:
 ------------------------------------------
                                           
-Jacobi/GS converged in 167 iterations
+Jacobi/GS converged in 149 iterations
                                           
 Plot Results:
 ------------------------------------------
