@@ -73,8 +73,6 @@ void FatalError(string msg)
 
 }
 
-// make a separate class for each mesh
-// instead of initializing the vectors, we make a class for them instead and point to the class 
 
 // ==
 // ||
