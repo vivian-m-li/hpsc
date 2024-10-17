@@ -52,9 +52,7 @@ using std :: endl;
 //typedef  vector<vector<double> > VDD;
 //typedef  vector<int>             VI;
 //typedef  vector<vector<int> >    VII;
-class VD{
-
-
+class VD {
 public:
     int VDsize;
     double* data;
@@ -88,8 +86,8 @@ public:
     
 };
 
-class VDD{
-  public:
+class VDD {
+  public:i
     int VDDsize;
     //VDDsize[2] ;
     VD* data;
