@@ -1,0 +1,31 @@
+==1906286== Cachegrind, a cache and branch-prediction profiler
+==1906284== Copyright (C) 2002-2017, and GNU GPL'd, by Nicholas Nethercote et al.
+==1906290== Using Valgrind-3.17.0 and LibVEX; rerun with -h for copyright info
+==1906290== Command: ./esPIC -nPEx 3 -nPEy 3 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01
+==1906290== Parent PID: 1906262
+==1906290== 
+--1906290-- warning: L3 cache found, using its data for the LL simulation.
+==1906289== Warning: noted but unhandled ioctl 0x7800 with no size/direction hints.
+==1906289==    This could cause spurious value errors to appear.
+==1906289==    See README_MISSING_SYSCALL_OR_IOCTL for guidance on writing a proper wrapper.
+==1906289== brk segment overflow in thread #1: can't grow to 0x4a39000
+==1906289== (see section Limitations in user manual)
+==1906289== NOTE: further instances of this message will not be shown
+==1906284== WARNING: valgrind ignores shmget(shmflg) SHM_HUGETLB
+==1906284== 
+==1906284== I   refs:      4,088,538,089
+==1906284== I1  misses:       29,756,836
+==1906284== LLi misses:           25,373
+==1906284== I1  miss rate:          0.73%
+==1906284== LLi miss rate:          0.00%
+==1906284== 
+==1906284== D   refs:      2,506,013,791  (1,531,920,881 rd   + 974,092,910 wr)
+==1906284== D1  misses:       20,670,694  (   14,032,313 rd   +   6,638,381 wr)
+==1906284== LLd misses:        1,762,994  (      270,266 rd   +   1,492,728 wr)
+==1906284== D1  miss rate:           0.8% (          0.9%     +         0.7%  )
+==1906284== LLd miss rate:           0.1% (          0.0%     +         0.2%  )
+==1906284== 
+==1906284== LL refs:          50,427,530  (   43,789,149 rd   +   6,638,381 wr)
+==1906284== LL misses:         1,788,367  (      295,639 rd   +   1,492,728 wr)
+==1906284== LL miss rate:            0.0% (          0.0%     +         0.2%  )
+        0.2%  )

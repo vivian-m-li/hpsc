@@ -1,0 +1,19 @@
+==1895921== Callgrind, a call-graph generating cache profiler
+==1895921== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==1895921== Using Valgrind-3.17.0 and LibVEX; rerun with -h for copyright info
+==1895921== Command: ./esPIC -nPEx 2 -nPEy 2 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01
+==1895921== Parent PID: 1895897
+==1895921== 
+==1895921== For interactive control, run 'callgrind_control -h'.
+==1895922== Warning: noted but unhandled ioctl 0x7800 with no size/direction hints.
+==1895922==    This could cause spurious value errors to appear.
+==1895922==    See README_MISSING_SYSCALL_OR_IOCTL for guidance on writing a proper wrapper.
+==1895922== brk segment overflow in thread #1: can't grow to 0x4a39000
+==1895922== (see section Limitations in user manual)
+==1895922== NOTE: further instances of this message will not be shown
+==1895921== WARNING: valgrind ignores shmget(shmflg) SHM_HUGETLB
+==1895919== 
+==1895919== Events    : Ir
+==1895919== Collected : 2508663198
+==1895919== 
+==1895919== I   refs:      2,508,663,198

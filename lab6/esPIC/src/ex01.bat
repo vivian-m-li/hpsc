@@ -18,7 +18,7 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
-#SBATCH --time=00:01:00
+#SBATCH --time=00:30:00
 #SBATCH --partition=atesting
 #SBATCH --output=ex01-%j.out
 
@@ -47,30 +47,18 @@ echo "|| Begin Execution of esPIC in slurm batch script."
 echo "||"
 echo "=="
 
+mpirun -n 4 valgrind --tool=callgrind --log-file="callgrind.log" --callgrind-out-file="callgrind.out" ./esPIC -nPEx 2 -nPEy 2 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01 > callgrind_tty.out
 
-COMPILER := mpicc
-UBUNTU   := ubuntu
-
-# Change if on ubuntu
-
-ifeq ($(strip $(LOGNAME)),scott)
-COMPILER := mpic++ 
-endif
-
-# -----------------------------------------------------
-# Make esPIC
-# -----------------------------------------------------
-
-
-mpicpp esPIC.cpp -g -o esPIC -std=c++11 -fopenmp
-
-mpirun -n 4 $CODE/esPIC -n 4 ./esPIC -nPEx 2 -nPEy 2 -nCellx 10 -nCelly 10 -nPtcl 50000 -flux 200 -tEnd 2 -dt 0.01 -tPlot .2 > tty.out
+mpirun -n 4 valgrind --tool=cachegrind --log-file="cachegrind.log" --cachegrind-out-file="cachegrind.out" ./esPIC -nPEx 2 -nPEy 2 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01 > cachegrind_tty.out
 
 echo "=="
 echo "||"
 echo "|| Execution of esPIC in slurm batch script complete."
 echo "||"
 echo "=="
+
+rm -rf *.plt
+rm -rf *.sed
 
 
 

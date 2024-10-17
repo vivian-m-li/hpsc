@@ -28,7 +28,7 @@
 
 # Default compiler is Intel MPI compiler
 
-COMPILER := mpicc
+COMPILER := mpicxx
 UBUNTU   := ubuntu
 
 # Change if on ubuntu
