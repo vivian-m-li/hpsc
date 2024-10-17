@@ -26,6 +26,48 @@
   //  ||
   //  ==
 
+// ggv
+// double **arrayDouble(VDD &myArray) {
+//   int nRows = myArray.size();
+//   int nCols = myArray[0].size();
+
+//   // Create a pointer that points to the beginning of each new row
+//   double **myArray_ptr = new double *[nRows];
+
+//   // Populate myArray_ptr
+//   int count = 0;
+//   for (int row = 0; row < nRows; ++row) {
+//     // myArray_ptr points to the memory location of myArray
+//     myArray_ptr[row] = myArray[row].data();
+//     ++count;
+//   }
+
+//   // Initialize
+//   for (int i = 0; i < nRows; ++i)
+//     for (int j = 0; j < nCols; ++j) myArray_ptr[i][j] = 10.;
+
+//   // Return the pointer
+//   return myArray_ptr;
+// }
+
+// // ggv
+// int **arrayInt(VII &myArray) {
+//   int nRows = sizeof(myArray) / sizeof(myArray[0]);
+//   int nCols = sizeof(myArray[0]) / sizeof(myArray[0][0]);
+
+//   // Create a pointer that points to the beginning of each new row
+//   int **myArray_ptr;
+//   myArray_ptr = new int *[nRows];
+
+//   // Populate myArray_ptr
+//   int count = 0;
+//   for (int row = 0; row < nRows; ++row) {
+//     // myArray_ptr points to the memory location of myArray
+//     myArray_ptr[row] = &myArray[count * nCols];
+//     ++count;
+//   }
+// }
+
 void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSorJacobi, int &finalIterCount )
   {
     int converged, it_converged;
@@ -54,7 +96,16 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
     
     converged = 0;
 
-    
+    \
+
+
+
+
+
+
+
+
+
     while ( converged == 0 )
       {
 	// ----------------------------------------------
@@ -86,8 +137,17 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
 	    // (3.1) Compute new guess for row r
 
 	    newval = b[r];
-	    for ( int c = 2 ; c <= bandwidth ; ++c ) newval -=  Acoef[r][c] * Solution[Jcoef[r][c]];
-	    newval /= Acoef[r][1];
+
+      // ggv
+			// double **Acoef_ggv = arrayDouble(Acoef);
+  		// int **Jcoef_ggv = arrayInt(Jcoef);
+		  // // this is where the matrix multiplication is going on
+	    // for ( int c = 2 ; c <= bandwidth ; ++c ) newval -=  Acoef_ggv[r][c] * Solution[Jcoef_ggv[r][c]];
+	    // newval /= Acoef_ggv[r][1];
+
+      // sr code
+			for ( int c = 2 ; c <= bandwidth ; ++c ) newval -=  Acoef[r][c] * Solution[Jcoef[r][c]];
+      newval /= Acoef[r][1];
 
 	    // (3.2) Convergence check
 
@@ -114,6 +174,8 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
 	// ----------------------------------------------
 	// (5) Gather convergence information from PEs
 	// ----------------------------------------------
+
+  // TODO: batch MPI calls?
 
 	int root = 0;
 	err = MPI_Reduce( &converged       , &global_converged, one , MPI_INT , MPI_MIN , zero , MPI_COMM_WORLD );

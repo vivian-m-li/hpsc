@@ -75,6 +75,8 @@ void matVec(double **A, double *x, double *b, int n) {
   }
 }
 
+// convert matrix to pointer matrix
+
 //--------------------------
 // Sparse Ax=b
 //--------------------------
