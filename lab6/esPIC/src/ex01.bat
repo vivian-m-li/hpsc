@@ -49,7 +49,7 @@ echo "=="
 
 mpirun -n 4 valgrind --tool=callgrind --log-file="callgrind.log" --callgrind-out-file="callgrind.out" ./esPIC -nPEx 2 -nPEy 2 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01 > callgrind_tty.out
 
-mpirun -n 4 valgrind --tool=cachegrind --log-file="cachegrind.log" --cachegrind-out-file="cachegrind.out" ./esPIC -nPEx 2 -nPEy 2 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01 > cachegrind_tty.out
+#mpirun -n 4 valgrind --tool=cachegrind --log-file="cachegrind.log" --cachegrind-out-file="cachegrind.out" ./esPIC -nPEx 2 -nPEy 2 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01 > cachegrind_tty.out
 
 echo "=="
 echo "||"

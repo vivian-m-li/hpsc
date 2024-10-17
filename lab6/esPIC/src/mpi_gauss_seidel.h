@@ -26,6 +26,48 @@
   //  ||
   //  ==
 
+// ggv
+// double **arrayDouble(VDD &myArray) {
+//   int nRows = myArray.size();
+//   int nCols = myArray[0].size();
+
+//   // Create a pointer that points to the beginning of each new row
+//   double **myArray_ptr = new double *[nRows];
+
+//   // Populate myArray_ptr
+//   int count = 0;
+//   for (int row = 0; row < nRows; ++row) {
+//     // myArray_ptr points to the memory location of myArray
+//     myArray_ptr[row] = myArray[row].data();
+//     ++count;
+//   }
+
+//   // Initialize
+//   for (int i = 0; i < nRows; ++i)
+//     for (int j = 0; j < nCols; ++j) myArray_ptr[i][j] = 10.;
+
+//   // Return the pointer
+//   return myArray_ptr;
+// }
+
+// // ggv
+// int **arrayInt(VII &myArray) {
+//   int nRows = sizeof(myArray) / sizeof(myArray[0]);
+//   int nCols = sizeof(myArray[0]) / sizeof(myArray[0][0]);
+
+//   // Create a pointer that points to the beginning of each new row
+//   int **myArray_ptr;
+//   myArray_ptr = new int *[nRows];
+
+//   // Populate myArray_ptr
+//   int count = 0;
+//   for (int row = 0; row < nRows; ++row) {
+//     // myArray_ptr points to the memory location of myArray
+//     myArray_ptr[row] = &myArray[count * nCols];
+//     ++count;
+//   }
+// }
+
 void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSorJacobi, int &finalIterCount )
   {
     int converged, it_converged;
@@ -54,7 +96,16 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
     
     converged = 0;
 
-    
+    \
+
+
+
+
+
+
+
+
+
     while ( converged == 0 )
       {
 	// ----------------------------------------------
@@ -78,30 +129,60 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
 	// ----------------------------------------------
 	// (3) One Jacobi Iteration
 	// ----------------------------------------------
-	
-	rLOOP
-	  {
 
-	    
-	    // (3.1) Compute new guess for row r
 
-	    newval = b[r];
-	    for ( int c = 2 ; c <= bandwidth ; ++c ) newval -=  Acoef[r][c] * Solution[Jcoef[r][c]];
-	    newval /= Acoef[r][1];
+	if (false) {
+		// Split up the work being done in this rLOOP
+		int rows_per_PE = nField / myMPI.numPE;
+		VD SolutionM; SolutionM.resize(rows_per_PE);
 
-	    // (3.2) Convergence check
+		for (int i = 0; i < myMPI.numPE; ++i)
+			if (i == myMPI.myPE) {
+				int row_count = 0;
+				for (int r = rows_per_PE * i + 1; r <= rows_per_PE * (i + 1); ++r) {
+					newval = b[r];	
+					for (int c = 2; c <= bandwidth; ++c) newval -=  Acoef[r][c] * Solution[Jcoef[r][c]];
+					newval /= Acoef[r][1];
 
-	    cur_delta  = fabs(Solution[r] - newval);
+					cur_delta  = fabs(Solution[r] - newval);
 
-	    if ( cur_delta > tol ) it_converged = 0;
+					if ( cur_delta > tol ) it_converged = 0;
 
-	    // (3.3) Record new value in solution
+					SolutionM[row_count]       = newval;
+					if ( GSorJacobi == 1 ) Solution[r] = newval;
 
-	    SolutionNew[r]       = newval;
+					++row_count;
+				}
+			}
 
-	    if ( GSorJacobi == 1 ) Solution[r] = newval;  // Gauss-Seidel, update Solution as we go
-	      
-	  }
+		MPI_Gather(SolutionM.data(), rows_per_PE, MPI_DOUBLE, SolutionNew.data(), rows_per_PE, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+	} else {
+		// ORIGINAL CODE
+		rLOOP
+			{
+
+				
+				// (3.1) Compute new guess for row r
+
+				newval = b[r];
+				
+				for ( int c = 2 ; c <= bandwidth ; ++c ) newval -=  Acoef[r][c] * Solution[Jcoef[r][c]];
+				newval /= Acoef[r][1];
+
+				// (3.2) Convergence check
+
+				cur_delta  = fabs(Solution[r] - newval);
+
+				if ( cur_delta > tol ) it_converged = 0;
+
+				// (3.3) Record new value in solution
+
+				SolutionNew[r]       = newval;
+
+				if ( GSorJacobi == 1 ) Solution[r] = newval;  // Gauss-Seidel, update Solution as we go
+					
+			}
+	}
 
 	rLOOP Solution[r] = SolutionNew[r];
 
@@ -114,6 +195,8 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
 	// ----------------------------------------------
 	// (5) Gather convergence information from PEs
 	// ----------------------------------------------
+
+  // TODO: batch MPI calls?
 
 	int root = 0;
 	err = MPI_Reduce( &converged       , &global_converged, one , MPI_INT , MPI_MIN , zero , MPI_COMM_WORLD );
