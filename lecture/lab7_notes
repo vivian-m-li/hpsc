@@ -14,3 +14,5 @@
 - this week's lab: use multiple threads to populate the matrix and solve the linear system
 - #pragma omp parallel for firstprivate(FPvar)
   - now every thread gets the value of FPvar
+
+- for timer: if it goes over a minute, then the seconds can roll over (in omp.h)

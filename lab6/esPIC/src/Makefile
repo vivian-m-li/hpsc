@@ -43,5 +43,6 @@ endif
 
 
 esPIC: esPIC.cpp esPIC.h gauss_seidel.h plotter.h mpiInfo.h particles.h particle_plotter.h LaplacianOnGrid.h
-	$(COMPILER) esPIC.cpp -g -o esPIC -std=c++11 -fopenmp
+	# $(COMPILER) esPIC.cpp -g -o esPIC -std=c++11 -fopenmp
+	$(COMPILER) esPIC.cpp -g -o esPIC -std=c++11
 
