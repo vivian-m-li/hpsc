@@ -1,0 +1,91 @@
+==
+||
+|| Begin Execution of ert in slurm batch script.
+||
+==
+
+Reading configuration from 'Config/config.alpine'...
+  Using existing results directory, Results.alpine...
+    Using existing run directory, Results.alpine/Run.002...
+
+FLOP count 1...
+  Building ERT core code...
+  Running ERT core code...
+    MPI 1, OpenMP 4
+    MPI 1, OpenMP 8
+    MPI 2, OpenMP 1
+    MPI 2, OpenMP 2
+    MPI 2, OpenMP 4
+    MPI 4, OpenMP 1
+    MPI 4, OpenMP 2
+    MPI 8, OpenMP 1
+  Processing results...
+
+FLOP count 2...
+  Building ERT core code...
+  Running ERT core code...
+    MPI 1, OpenMP 1
+    MPI 1, OpenMP 2
+    MPI 1, OpenMP 4
+    MPI 1, OpenMP 8
+    MPI 2, OpenMP 1
+    MPI 2, OpenMP 2
+    MPI 2, OpenMP 4
+    MPI 4, OpenMP 1
+    MPI 4, OpenMP 2
+    MPI 8, OpenMP 1
+  Processing results...
+
+FLOP count 4...
+  Building ERT core code...
+  Running ERT core code...
+    MPI 1, OpenMP 1
+    MPI 1, OpenMP 2
+    MPI 1, OpenMP 4
+    MPI 2, OpenMP 1
+    MPI 2, OpenMP 2
+    MPI 2, OpenMP 4
+    MPI 4, OpenMP 1
+    MPI 4, OpenMP 2
+    MPI 8, OpenMP 1
+  Processing results...
+
+FLOP count 8...
+  Building ERT core code...
+  Running ERT core code...
+    MPI 1, OpenMP 1
+    MPI 1, OpenMP 2
+    MPI 1, OpenMP 8
+    MPI 2, OpenMP 1
+    MPI 2, OpenMP 2
+    MPI 2, OpenMP 4
+    MPI 4, OpenMP 1
+    MPI 4, OpenMP 2
+    MPI 8, OpenMP 1
+  Processing results...
+
+FLOP count 16...
+  Building ERT core code...
+  Running ERT core code...
+    MPI 1, OpenMP 1
+    MPI 1, OpenMP 2
+    MPI 1, OpenMP 8
+    MPI 2, OpenMP 1
+    MPI 2, OpenMP 4
+    MPI 4, OpenMP 1
+    MPI 4, OpenMP 2
+    MPI 8, OpenMP 1
+  Processing results...
+
+Gathering the final roofline results...
+
++-------------------------------------------------
+| Empirical roofline graph:    'Results.alpine/Run.002/roofline.ps'
+| Empirical roofline database: 'Results.alpine/Run.002/roofline.json'
++-------------------------------------------------
+
+==
+||
+|| Execution of ert in slurm batch script complete.
+||
+==

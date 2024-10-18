@@ -1,0 +1,62 @@
+==
+||
+|| Begin Execution of ert in slurm batch script.
+||
+==
+
+Reading configuration from 'Config/config.alpine'...
+  Using existing results directory, Results.alpine...
+
+*** WARNING ***
+**
+**  Making new run directory, 'Results.alpine/Run.002',
+**    because the current connfiguration file, 'Config/config.alpine' 
+**    doesn't match the configuration files, 'config.ert', under:
+**
+**      Results.alpine/Run.001
+**
+*** WARNING ***
+
+FLOP count 1...
+  Building ERT core code...
+  Running ERT core code...
+    MPI 1, OpenMP 1
+    MPI 1, OpenMP 2
+    MPI 1, OpenMP 4
+    MPI 1, OpenMP 8
+    MPI 2, OpenMP 1
+    MPI 2, OpenMP 2
+    MPI 2, OpenMP 4
+    MPI 4, OpenMP 1
+    MPI 4, OpenMP 2
+    MPI 8, OpenMP 1
+  Processing results...
+
+FLOP count 2...
+  Building ERT core code...
+  Running ERT core code...
+    MPI 1, OpenMP 1
+    MPI 1, OpenMP 2
+    MPI 1, OpenMP 4
+    MPI 1, OpenMP 8
+    MPI 2, OpenMP 1
+    MPI 2, OpenMP 2
+    MPI 2, OpenMP 4
+    MPI 4, OpenMP 1
+    MPI 4, OpenMP 2
+    MPI 8, OpenMP 1
+Traceback (most recent call last):
+  File "./Scripts/preprocess.py", line 28, in <module>
+    pkey = int(precision.value)
+NameError: name 'precision' is not defined
+  Failure...
+Unable to process Results.alpine/Run.002/FLOPS.002/MPI.0002/OpenMP.0004
+
+--- Processing ERT results failed ---
+
+  Processing results...
+==
+||
+|| Execution of ert in slurm batch script complete.
+||
+==
