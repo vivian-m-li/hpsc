@@ -89,15 +89,15 @@ class LaplacianOnGrid
 public:
 
   double x0, x1, y0, y1;
-  std::vector<double> x,y;
+  VD x,y;
   int nRealx    , nRealy   , nField;
   double dx, dy;
-  std::vector<std::vector<double>> Acoef;
-  std::vector<std::vector<int>> Jcoef ;
-  std::vector<double>  phi ;  std::vector<double>  b ;
+  VDD Acoef;
+  VII Jcoef ;
+  VD  phi ;  VD  b ;
   int bandwidth;
   int myPE;
-  std::vector<double> Qval;
+  VD Qval;
 
   //  ==
   //  ||

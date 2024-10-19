@@ -169,7 +169,7 @@ int main(int argc, char *argv[])
 
        MPI_Barrier(MPI_COMM_WORLD);
 
-       MESH.GS_or_Jacobi(5000, MESH.b , MESH.phi , myMPI , 2, latestIterCount);
+       MESH.GS_or_Jacobi(5000, MESH.b , MESH.phi , myMPI , 2, latestIterCount, MESH.x0, MESH.x1, MESH.y0, MESH.y1, MESH.nRealx, MESH.nRealy);
 
        // Plot
  

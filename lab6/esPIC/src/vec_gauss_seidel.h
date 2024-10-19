@@ -26,7 +26,7 @@
   //  ||
   //  ==
 
-void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSorJacobi, int &finalIterCount )
+void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSorJacobi, int &finalIterCount , int x0, int x1, int y0, int y1, int nRealx, int nRealy)
   {
     int converged, it_converged;
     int iter = 0;
@@ -34,6 +34,8 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
     double cur_delta = 0.;
     double max_delta = 0.;
     double tol;
+    double dx;
+    double dy;
 
     MPI_Status status;
     int        tag = 0;
@@ -41,7 +43,12 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
     int        global_converged;
     int        zero = 0;
     int        one  = 1;
+
     
+    dx     = (x1-x0)/(nRealx-1);
+    dy     = (y1-y0)/(nRealy-1);
+    double dx2 = dx * dx;
+    double dy2 = dy * dy;
 
     VD SolutionNew; SolutionNew.resize(Solution.size());
 
@@ -86,8 +93,21 @@ void GS_or_Jacobi(int max_iter , VD RHS, VD &Solution , mpiInfo &myMPI , int GSo
 	    // (3.1) Compute new guess for row r
 
 	    newval = b[r];
-	    for ( int c = 2 ; c <= bandwidth ; ++c ) newval -=  Acoef[r][c] * Solution[Jcoef[r][c]];
-	    newval /= Acoef[r][1];
+	    
+	    if (true) {
+	    	newval -= ((1./dx2 * Solution[r+1]) + (1./dx2 * Solution[r-1]) + (1./dy2 * Solution[r + nRealx + 2]) + (1./dy2 * Solution[r - nRealx - 2]));
+            	newval /= (1./dx2);
+
+		int newval_og = b[r];
+		for ( int c = 2 ; c <= bandwidth ; ++c ) newval_og -=  Acoef[r][c] * Solution[Jcoef[r][c]];
+                newval_og /= Acoef[r][1];
+
+		cout << "original value: " << newval_og << ", new value: " << newval << endl;
+
+	    } else {
+	    	for ( int c = 2 ; c <= bandwidth ; ++c ) newval -=  Acoef[r][c] * Solution[Jcoef[r][c]];
+	    	newval /= Acoef[r][1];
+	    }
 
 	    // (3.2) Convergence check
 

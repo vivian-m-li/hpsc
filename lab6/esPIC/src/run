@@ -8,7 +8,7 @@ rm -rf *.plt
 # REGULAR OPTION:
 #--------------------------------------------------------------------------------------------------------
 
-mpirun -n 4 ./esPIC -nPEx 2 -nPEy 2 -nCellx 12 -nCelly 12 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01
+mpirun -n 4 ./esPIC -nPEx 2 -nPEy 2 -nCellx 6 -nCelly 6 -flux 1000. -vx_bdy 1. -npHat 80. -tEnd 1 -dt .01
 
 #--------------------------------------------------------------------------------------------------------
 # GNUPLOT FILES:
