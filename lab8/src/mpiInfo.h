@@ -134,10 +134,11 @@ class mpiInfo
     peMultiplicity.resize(nField + 1);
 
     /* TO-DO in Lab: Compute peMultiplicity */
-    //////
-    //////
-    //////
-    
+    // initialize peMultiplicity to 1, the default value
+    rLOOP peMultiplicity[r] = 1;
+
+    // communicate with neighboring PEs to check which ones share a boundary
+    PEsum(peMultiplicity);
   }
 
   

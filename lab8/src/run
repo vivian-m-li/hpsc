@@ -1,7 +1,7 @@
 
 rm *.plt
 
-mpirun -n 4 ./solvers -nPEx 2 -nPEy 2 -nCellx 10 -nCelly 10 -solver cg | tee tmp
+time mpirun -n 4 ./solvers -nPEx 2 -nPEy 2 -nCellx 12 -nCelly 12 -solver cg | tee tmp
 
 #--------------------------------------------------------------------------------------------------------
 # DEBUG FILES:

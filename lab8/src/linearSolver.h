@@ -63,35 +63,35 @@ void Jacobi(VD &Solution , mpiInfo &myMPI )
     
     while ( global_converged == 0 && ++iter <= max_iter )
       {
-	// (4.1) Update each row
-	
-	converged = 1;
-	
-	rLOOP
-	  {
-	    RowSum_sumPE[r] = b[r];
-	    for ( int c = 2 ; c <= bandwidth ; ++c ) RowSum_sumPE[r] -=  Acoef[r][c] * Solution[Jcoef[r][c]];
-	  }
-	
-	myMPI.PEsum( RowSum_sumPE );
+        // (4.1) Update each row
+        
+        converged = 1;
+        
+        rLOOP
+          {
+            RowSum_sumPE[r] = b[r];
+            for ( int c = 2 ; c <= bandwidth ; ++c ) RowSum_sumPE[r] -=  Acoef[r][c] * Solution[Jcoef[r][c]];
+          }
+        
+        myMPI.PEsum( RowSum_sumPE );
 
-	rLOOP
-	  {
-	    newval = RowSum_sumPE[r]/Diag_sumPE[r];
-	    cur_delta  = fabs(Solution[r] - newval);
-	    if ( cur_delta > tol ) converged = 0;
-	    Solution[r]       = newval;
-	  }
+        rLOOP
+          {
+            newval = RowSum_sumPE[r]/Diag_sumPE[r];
+            cur_delta  = fabs(Solution[r] - newval);
+            if ( cur_delta > tol ) converged = 0;
+            Solution[r]       = newval;
+          }
 
-	// (4.2) Check convergence across PEs
+        // (4.2) Check convergence across PEs
 
-	MPI_Allreduce(&converged, &global_converged, 1 , MPI_INT, MPI_MIN, MPI_COMM_WORLD);
+        MPI_Allreduce(&converged, &global_converged, 1 , MPI_INT, MPI_MIN, MPI_COMM_WORLD);
       }
     
     // (5) Done - inform user
 
     if ( global_converged == 1 ) if ( myMPI.myPE == 0 ) cout << "Jacobi converged in " << iter << " iterations.\n" ;
-    if ( global_converged == 0 ) if ( myMPI.myPE == 0 ) cout << "Jacobi failed to converge aftger " << iter << " iterations.\n" ;
+    if ( global_converged == 0 ) if ( myMPI.myPE == 0 ) cout << "Jacobi failed to converge after " << iter << " iterations.\n" ;
 
   }
 
@@ -111,9 +111,15 @@ void Jacobi(VD &Solution , mpiInfo &myMPI )
 
 double Dot(VD &vec1, VD &vec2 , mpiInfo &myMPI)
 {
+  double global = 0.;
+  double scalar_product = 0.;
 
-  /* TO-DO in Lab */
-  
+  rLOOP scalar_product += (vec1[r] * vec2[r]) / myMPI.peMultiplicity[r];
+
+  // Sum the scalar product across all PEs
+  MPI_Allreduce(&scalar_product, &global, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+
+  return global;
 }
 
 
@@ -144,6 +150,7 @@ void MatVecProd(VD &p , VD &prod , mpiInfo &myMPI)
   // Handle PE boundaries
 
   /* TO-DO in Lab:  Accommodate PE Boundaries */
+  myMPI.PEsum(prod); // sum the product across all PEs
   
 }
 
@@ -214,7 +221,10 @@ void CG(VD &Solution , mpiInfo & myMPI)
   // Accommodate the fact the the right-hand-side vector, b, is not complete on PE boundaries.
 
   /* TO-DO in Lab */ 
+  rLOOP b_PEsum[r] = b[r]; // initialize b_PEsum
+  
   /* TO-DO in Lab */ 
+  myMPI.PEsum(b_PEsum); // sum across all PEs
   
   // (3) Initialize residual, r, and r dot r for CG algorithm
 
@@ -256,20 +266,21 @@ void CG(VD &Solution , mpiInfo & myMPI)
       // (4.6) Check convergence on this PE
 
       rowLOOP
-	{
-	  cur_delta  = fabs(alpha * p[row]);
-	  if ( cur_delta > tol ) converged = 0;
-	}
+      {
+        cur_delta  = fabs(alpha * p[row]);
+        if ( cur_delta > tol ) converged = 0;
+      }
 
       if ( fabs(r_dot_r) < 1.e-10)
-	converged = 1;
+        converged = 1;
       else
-	converged = 0;
+        converged = 0;
       
       // (4.7) Check convergence across PEs, store result in "global_converged"
 
       /* TO-DO in Lab: Ensure global convergence on all PEs */
-
+      // check the logical and of all PE converged values to get if all PEs have converged
+      MPI_Allreduce(&converged, &global_converged, 1 , MPI_INT, MPI_MIN, MPI_COMM_WORLD);
     }
 
     // (5) Done - Inform user

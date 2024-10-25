@@ -43,5 +43,5 @@ COMPILER := mpicxx
 
 
 solvers: solvers.cpp solvers.h linearSolver.h plotter.h mpiInfo.h LaplacianOnGrid.h
-	$(COMPILER) solvers.cpp -g -o solvers -std=c++11 -fopenmp
+	$(COMPILER) solvers.cpp -g -o solvers -std=c++11
 
