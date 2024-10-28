@@ -8,6 +8,9 @@
 
 ------------------------------------------------------
 
+[timingInfo] [main] Start time (Wall): 0 Start time (CPU) : 21998
 CG converged in 83 iterations.
 (o) Writing gnuplot command file 'pc'
 (o) Writing gnuplot command file 'pc'
+[timingInfo] [main] Finish time (Wall): 0.045767 Finish time (CPU) : 54241
+[timingInfo] [main] Elapsed time (Wall, seconds): 0.045767 Elapsed time (CPU, seconds) : 0.032243
