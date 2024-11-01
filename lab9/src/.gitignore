@@ -1,0 +1,17 @@
+*.plt
+*~
+solvers
+cachegrind.out.*
+callgrind.out.*
+valgrindOutput
+vg
+pc_phi
+pc_phi_nr_cg
+pc_phi_sa_cg
+tty_vg
+
+
+
+
+
+

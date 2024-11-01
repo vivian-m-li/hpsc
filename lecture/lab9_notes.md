@@ -1,0 +1,8 @@
+- analyze the code for where threading might pay off
+  - try that enhancement
+- builds off of:
+  - jacobi and CG solvers as input options
+  - a nonlinearity with nonlinear iterations
+  - more interesting problem for performance analysis
+  - uses MPI but not threading... yet
+- correctness verification: the plots have to match
