@@ -289,17 +289,17 @@ public:
     ANNOTATE_ITERATION_TASK(BCrowLoop);
     rLOOP
       if (  r != BCrow )
-	{
-	  cLOOP
-	    {
-	      if ( Jcoef[r][c] == BCrow )
-		{
-		  RHS[r] -= Matrix[r][c]*BCvalue;
-		  Jcoef[r][c] = 0; Matrix[r][c] = 0.;
-		}
-	    }
-	}
-    ANNOTATE_SITE_END();
+      {
+        cLOOP
+          {
+            if ( Jcoef[r][c] == BCrow )
+        {
+          RHS[r] -= Matrix[r][c]*BCvalue;
+          Jcoef[r][c] = 0; Matrix[r][c] = 0.;
+        }
+          }
+      }
+      ANNOTATE_SITE_END();
   }
 
   //  ==
