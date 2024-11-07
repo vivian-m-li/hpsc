@@ -285,8 +285,6 @@ public:
     Jcoef [ BCrow ] [ 1 ] = BCrow   ;
     RHS   [ BCrow ]       = BCvalue ;
 
-    ANNOTATE_SITE_BEGIN(setBC);
-    ANNOTATE_ITERATION_TASK(BCrowLoop);
     rLOOP
       if (  r != BCrow )
       {
@@ -299,7 +297,6 @@ public:
         }
           }
       }
-      ANNOTATE_SITE_END();
   }
 
   //  ==
