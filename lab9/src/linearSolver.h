@@ -61,7 +61,8 @@ void Jacobi(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
   myMPI.PEsum(Diag_sumPE);
 
   // (4) Begin Iterations
-
+  ANNOTATE_SITE_BEGIN(JacobiIterations);
+  ANNOTATE_ITERATION_TASK(JacobiIterationsLoop);
   while (global_converged == 0 && ++iter <= max_iter) {
     // (4.1) Update each row
 
@@ -85,6 +86,7 @@ void Jacobi(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
 
     MPI_Allreduce(&converged, &global_converged, 1, MPI_INT, MPI_MIN, MPI_COMM_WORLD);
   }
+  ANNOTATE_SITE_END();
 
   // (5) Done - inform user
 
@@ -215,7 +217,8 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
   r_dot_r = Dot(r, r, myMPI);
 
   // (4) CG Iterations
-
+  ANNOTATE_SITE_BEGIN(CGIterations);
+  ANNOTATE_ITERATION_TASK(CGIterationsLoop);
   while (global_converged == 0 && ++iter <= max_iter) {
     // (4.1) Compute alpha
     omp_set_num_threads(1);
@@ -252,6 +255,7 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
     // (4.7) Check convergence across PEs, store result in "global_converged"
     MPI_Allreduce(&converged, &global_converged, 1, MPI_INT, MPI_MIN, MPI_COMM_WORLD);  // ~LabStrip~
   }
+  ANNOTATE_SITE_END();
 
   // (5) Done - Inform user
 
