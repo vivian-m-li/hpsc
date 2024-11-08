@@ -1,0 +1,5 @@
+- all files will be binary
+  - we'll be writing binary files hoping they'll be right, sb.py knows what to expect and displays them in a file to debug
+- showBinary is a compilation of showBinary.cpp --> writes and read binary files, could be helpful in debugging
+- focus on main.cpp
+- when doing restarts, have to write some metadata at the beginning of the file - how many cells in the file, how many timesteps, when was the last time we wrote a plot file?
