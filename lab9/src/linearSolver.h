@@ -61,7 +61,8 @@ void Jacobi(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
   myMPI.PEsum(Diag_sumPE);
 
   // (4) Begin Iterations
-
+  ANNOTATE_SITE_BEGIN(JacobiIterations);
+  ANNOTATE_ITERATION_TASK(JacobiIterationsLoop);
   while (global_converged == 0 && ++iter <= max_iter) {
     // (4.1) Update each row
 
@@ -85,6 +86,7 @@ void Jacobi(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
 
     MPI_Allreduce(&converged, &global_converged, 1, MPI_INT, MPI_MIN, MPI_COMM_WORLD);
   }
+  ANNOTATE_SITE_END();
 
   // (5) Done - inform user
 
@@ -215,47 +217,31 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
   r_dot_r = Dot(r, r, myMPI);
 
   // (4) CG Iterations
-
+  ANNOTATE_SITE_BEGIN(CGIterations);
+  ANNOTATE_ITERATION_TASK(CGIterationsLoop);
   while (global_converged == 0 && ++iter <= max_iter) {
     // (4.1) Compute alpha
-    ANNOTATE_SITE_BEGIN(MatVecProd);
-    ANNOTATE_ITERATION_TASK(CGMatVecProd);
     omp_set_num_threads(1);
     MatVecProd(Matrix, p, Ap, myMPI);  // A*p (stored in Ap)
     p_dot_Ap = Dot(p, Ap, myMPI);      // p*Ap
     alpha = r_dot_r / p_dot_Ap;
-    ANNOTATE_SITE_END();
 
     // (4.2) Update solution and residual
-    ANNOTATE_SITE_BEGIN(updateSolution);
-    ANNOTATE_ITERATION_TASK(updateSolution);
     rowLOOP Solution[row] = Solution[row] + alpha * p[row];
     rowLOOP rnew[row] = r[row] - alpha * Ap[row];
-    ANNOTATE_SITE_END();
 
     // (4.3) Compute beta
-    ANNOTATE_SITE_BEGIN(dotProduct);
-    ANNOTATE_ITERATION_TASK(CGdotProduct);
     rnew_dot_rnew = Dot(rnew, rnew, myMPI);
     beta = rnew_dot_rnew / r_dot_r;
-    ANNOTATE_SITE_END();
 
     // (4.4) Update search direction
-    ANNOTATE_SITE_BEGIN(updateSearchDirection);
-    ANNOTATE_ITERATION_TASK(updateSearchDirectionLoop);
     rowLOOP p[row] = rnew[row] + beta * p[row];
-    ANNOTATE_SITE_END();
 
     // (4.5) r "new" will be r "old" for next iteration
-    ANNOTATE_SITE_BEGIN(setRNew);
-    ANNOTATE_ITERATION_TASK(setRNewLoop);
     rowLOOP r[row] = rnew[row];
     r_dot_r = rnew_dot_rnew;
-    ANNOTATE_SITE_END();
 
     // (4.6) Check convergence on this PE
-    ANNOTATE_SITE_BEGIN(checkLocalConvergence);
-    ANNOTATE_ITERATION_TASK(checkLocalConvergenceLoop);
     rowLOOP {
       cur_delta = fabs(alpha * p[row]);
       if (cur_delta > tol) converged = 0;
@@ -265,14 +251,11 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
       converged = 1;
     else
       converged = 0;
-    ANNOTATE_SITE_END();
 
     // (4.7) Check convergence across PEs, store result in "global_converged"
-    ANNOTATE_SITE_BEGIN(checkGlobalConvergence);
-    ANNOTATE_ITERATION_TASK(checkGlobalConvergenceLoop);
     MPI_Allreduce(&converged, &global_converged, 1, MPI_INT, MPI_MIN, MPI_COMM_WORLD);  // ~LabStrip~
-    ANNOTATE_SITE_END();
   }
+  ANNOTATE_SITE_END();
 
   // (5) Done - Inform user
 

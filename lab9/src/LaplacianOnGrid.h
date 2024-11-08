@@ -285,8 +285,6 @@ public:
     Jcoef [ BCrow ] [ 1 ] = BCrow   ;
     RHS   [ BCrow ]       = BCvalue ;
 
-    ANNOTATE_SITE_BEGIN(setBC);
-    ANNOTATE_ITERATION_TASK(BCrowLoop);
     rLOOP
       if (  r != BCrow )
       {
@@ -299,7 +297,6 @@ public:
         }
           }
       }
-      ANNOTATE_SITE_END();
   }
 
   //  ==
@@ -312,23 +309,29 @@ public:
   {
     int converged = 1;
     
+    ANNOTATE_SITE_BEGIN(NRSolver);
+    ANNOTATE_ITERATION_TASK(NRSolverLoop);
     rLOOP
       {
      	phi[r] = phi[r]*relax + (1.-relax)*( phi[r] + dPhi[r] );
 	
      	if ( fabs( dPhi[r] ) > tolerance ) converged = 0;
       }
+    ANNOTATE_SITE_END();
     return converged;
   }
 
   int SA_Phi_Update( double tolerance , double relax)
   {
     int converged = 1;
+    ANNOTATE_SITE_BEGIN(SASolver);
+    ANNOTATE_ITERATION_TASK(SASolverLoop);
     rLOOP
       {
-	if ( fabs( phiNew[r] - phi[r] ) > tolerance ) converged = 0;
-	phi[r] = relax*phi[r] + (1.-relax)*phiNew[r] ;
+      if ( fabs( phiNew[r] - phi[r] ) > tolerance ) converged = 0;
+      phi[r] = relax*phi[r] + (1.-relax)*phiNew[r] ;
       }
+    ANNOTATE_SITE_END();
     return converged;
   }
 
