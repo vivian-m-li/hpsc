@@ -1,0 +1,11 @@
+
+rm output.bin
+
+mpirun -n 4 ./main 
+
+./sb.py -f output.bin -x 5
+
+
+
+
+
