@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
    MPI_Comm_size(MPI_COMM_WORLD, &myMPI.numPE);
    MPI_Comm_rank(MPI_COMM_WORLD,&myMPI.myPE  );
 
+   timingInfo myTime("main");
+   myTime.Start(myMPI.myPE);
 
    int nPEx, nPEy, nCellx, nCelly;
    string   solver;
@@ -201,7 +203,7 @@ int main(int argc, char *argv[])
    // |
    // -
    
-   //   myTime.Finish(myMPI.myPE);
+   myTime.Finish(myMPI.myPE);
 
    MPI_Finalize();
    return 0;

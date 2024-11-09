@@ -61,8 +61,6 @@ void Jacobi(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
   myMPI.PEsum(Diag_sumPE);
 
   // (4) Begin Iterations
-  ANNOTATE_SITE_BEGIN(JacobiIterations);
-  ANNOTATE_ITERATION_TASK(JacobiIterationsLoop);
   while (global_converged == 0 && ++iter <= max_iter) {
     // (4.1) Update each row
 
@@ -86,7 +84,6 @@ void Jacobi(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
 
     MPI_Allreduce(&converged, &global_converged, 1, MPI_INT, MPI_MIN, MPI_COMM_WORLD);
   }
-  ANNOTATE_SITE_END();
 
   // (5) Done - inform user
 
@@ -132,7 +129,7 @@ double Dot(VD &vec1, VD &vec2, mpiInfo &myMPI) {
 
 void MatVecProd(VDD &Matrix, VD &p, VD &prod, mpiInfo &myMPI) {
 // Serial computation on this PE
-#pragma omp parallel
+// #pragma omp parallel
   rowLOOP {
     prod[row] = 0.;
     colLOOP {
@@ -216,12 +213,11 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
 
   r_dot_r = Dot(r, r, myMPI);
 
+  // omp_set_num_threads(2);
+
   // (4) CG Iterations
-  ANNOTATE_SITE_BEGIN(CGIterations);
-  ANNOTATE_ITERATION_TASK(CGIterationsLoop);
   while (global_converged == 0 && ++iter <= max_iter) {
     // (4.1) Compute alpha
-    omp_set_num_threads(1);
     MatVecProd(Matrix, p, Ap, myMPI);  // A*p (stored in Ap)
     p_dot_Ap = Dot(p, Ap, myMPI);      // p*Ap
     alpha = r_dot_r / p_dot_Ap;
@@ -255,7 +251,6 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
     // (4.7) Check convergence across PEs, store result in "global_converged"
     MPI_Allreduce(&converged, &global_converged, 1, MPI_INT, MPI_MIN, MPI_COMM_WORLD);  // ~LabStrip~
   }
-  ANNOTATE_SITE_END();
 
   // (5) Done - Inform user
 
