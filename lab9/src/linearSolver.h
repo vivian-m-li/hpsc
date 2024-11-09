@@ -221,7 +221,10 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
     alpha = r_dot_r / p_dot_Ap;
 
     // (4.2) Update solution and residual
+    // #pragma omp parallel for
     rowLOOP Solution[row] = Solution[row] + alpha * p[row];
+
+    // #pragma omp parallel for
     rowLOOP rnew[row] = r[row] - alpha * Ap[row];
 
     // (4.3) Compute beta

@@ -1,5 +1,5 @@
 Begin execution
-[timingInfo] [main] Start time (Wall): 9.39366e+06 Start time (CPU) : 234327
+[timingInfo] [main] Start time (Wall): 9.40588e+06 Start time (CPU) : 241766
 
 ------------------------------------------------------
 
@@ -41,6 +41,6 @@ NON-LINEAR SOLVE
   (o) CG converged in 100 iterations.
 nr converged in 15 iterations.
 (o) Writing gnuplot command file pc_'phi_nr_cg'
-[timingInfo] [main] Finish time (Wall): 9.39366e+06 Finish time (CPU) : 3655858
-[timingInfo] [main] Elapsed time (Wall, seconds): 1.8726 Elapsed time (CPU, seconds) : 3.42153
+[timingInfo] [main] Finish time (Wall): 9.40589e+06 Finish time (CPU) : 10407677
+[timingInfo] [main] Elapsed time (Wall, seconds): 1.60332 Elapsed time (CPU, seconds) : 10.1659
 Done
