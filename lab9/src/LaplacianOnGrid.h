@@ -285,6 +285,7 @@ public:
     Jcoef [ BCrow ] [ 1 ] = BCrow   ;
     RHS   [ BCrow ]       = BCvalue ;
 
+    // #pragma omp parallel for
     rLOOP
       if (  r != BCrow )
       {

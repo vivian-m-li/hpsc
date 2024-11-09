@@ -129,7 +129,7 @@ double Dot(VD &vec1, VD &vec2, mpiInfo &myMPI) {
 
 void MatVecProd(VDD &Matrix, VD &p, VD &prod, mpiInfo &myMPI) {
 // Serial computation on this PE
-// #pragma omp parallel
+  #pragma omp parallel for
   rowLOOP {
     prod[row] = 0.;
     colLOOP {
@@ -212,8 +212,6 @@ void CG(VDD &Matrix, VD &RHS, VD &Solution, mpiInfo &myMPI) {
   rowLOOP p[row] = r[row];
 
   r_dot_r = Dot(r, r, myMPI);
-
-  // omp_set_num_threads(2);
 
   // (4) CG Iterations
   while (global_converged == 0 && ++iter <= max_iter) {
