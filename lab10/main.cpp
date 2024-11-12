@@ -1,6 +1,10 @@
 
 #include<mpi.h>  
 #include <cstdlib>
+#include <iostream>
+#include <string>
+using std ::cout;
+using std ::endl;
 
 // ==
 // ||
@@ -132,7 +136,7 @@ int main(  int argc, char *argv[] )
 
   nPEx = 2;
   nPEy = 2;
-  
+
   jPE = int(myPE/nPEx);
   iPE = myPE - jPE*nPEx;
 
@@ -149,13 +153,21 @@ int main(  int argc, char *argv[] )
   
   MPI_Datatype myRealNodes;
   int idxStartThisPE  [2] = { 1        , 1        };  // Index coordinates of the sub-array inside this PE's array, A
-  int AsizeThisPE     [2] = { /* TO-DO in Lab */  };  // Size of the A array on this PE    
-  int sub_AsizeThisPE [2] = { /* TO-DO in Lab */  };  // Size of the A-sub-array on this PE
+  int AsizeThisPE     [2] = { nRealx+1, nRealy+1 /* done */  };  // Size of the A array on this PE    
+  int sub_AsizeThisPE [2] = { nRealx, nRealy /* done */  };  // Size of the A-sub-array on this PE
 
   // Adjust sub_AsizeThisPE and idxStartThisPE to avoid writing values on PE boundaries twice
 
   /* TO-DO in Lab */
   /* TO-DO in Lab */
+  if (iPE > 0) { // there is a western neighbor
+    idxStartThisPE[0] += 1; // skip the first column
+    sub_AsizeThisPE[0] -= 1; // remove the first column to avoid overcounting
+  }
+  if (jPE > 0) { // there is a southern neighbor
+    idxStartThisPE[1] += 1; // skip the first column
+    sub_AsizeThisPE[1] -= 1; // remove the first row to avoid overcounting
+  }
 
   // (5.2) Ask MPI to create that new datatype
   //
@@ -182,13 +194,26 @@ int main(  int argc, char *argv[] )
   //     from this PE's perspective, i.e., where in that file this PE should write its data.
   
   MPI_Datatype myPartOfGlobal;
-  int idxStartInGlobal [2] = { /* TO-DO in Lab */    };  // Index cordinates of the sub-arrayinside the global array
-  int AsizeGlobal      [2] = { /* TO-DO in Lab */    };  // Size of the global array
+  // subtract 1 from nRealx/y because we're 0 indexing the PEs
+  int idxStartInGlobal [2] = { iPE * (nRealx - 1)  , jPE * (nRealy - 1) /* done */    };  // Index coordinates of the sub-array inside the global array
+  // add 1 because we're not skipping any values on the west/south boundaries
+  int AsizeGlobal      [2] = { nPEx * (nRealx - 1) + 1 , nPEy * (nRealy - 1) + 1 /* done */    };  // Size of the global array
 
-  // Adjust idxStartInGlbal to ensure proper values are written.
+  // Adjust idxStartInGlobal to ensure proper values are written.
 
   /* TO-DO in Lab */
   /* TO-DO in Lab */
+  if (iPE > 0) { // there is a western neighbor
+    idxStartInGlobal[0] += 1; // ignore the first column of values
+  }
+  if (jPE > 0) { // there is a southern neighbor
+    idxStartInGlobal[1] += 1; // ignore the first row of values
+  }
+
+  // For debugging
+  cout << "myPE (" << iPE << ", " << jPE << "): " << idxStartInGlobal[0] << ", " << idxStartInGlobal[1] << endl;
+  if (myPE == 0)
+    cout << "AsizeGlobal: " << AsizeGlobal[0] << ", " << AsizeGlobal[1] << endl;
   
   // ------------------------------------------------------------------------------------------------------
   //

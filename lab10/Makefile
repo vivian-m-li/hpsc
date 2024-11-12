@@ -22,7 +22,7 @@
 
 
 main: main.cpp 
-	mpicxx -fopenmp main.cpp -o main -std=c++11
+	mpicxx main.cpp -o main -std=c++11
 
 
 
