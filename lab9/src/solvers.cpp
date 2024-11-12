@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
    timingInfo myTime("main");
    myTime.Start(myMPI.myPE);
 
-   omp_set_num_threads(4); // Spawns threads in parallel regions, in linearSolver.h and LaplacianOnGrid.h
+   omp_set_num_threads(8); // Spawns threads in parallel regions, in linearSolver.h and LaplacianOnGrid.h
 
    int nPEx, nPEy, nCellx, nCelly;
    string   solver;

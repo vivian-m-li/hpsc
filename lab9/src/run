@@ -11,7 +11,7 @@ rm *.plt
 #--------------------------------------------------------------------------------------------------------
 
 # mpirun -n 4 ./solvers -nPEx 2 -nPEy 2 -nCellx 20 -nCelly 20 -solver cg -nl sa -c0 5. -tau 1. -r .8 | tee  tmp
-mpirun -n 1 ./solvers -nPEx 1 -nPEy 1 -nCellx 64 -nCelly 64 -solver cg -nl nr -c0 5. -tau 1. -r .3 | tee  tmp
+mpirun -n 4 ./solvers -nPEx 2 -nPEy 2 -nCellx 64 -nCelly 64 -solver cg -nl nr -c0 5. -tau 1. -r .3 | tee  tmp
 
 #--------------------------------------------------------------------------------------------------------
 # VALGRIND OPTION:

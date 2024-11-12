@@ -12,6 +12,11 @@ module load impi
 
 echo "Begin execution"
 
-mpirun -n 1 ./solvers -nPEx 1 -nPEy 1 -nCellx 64 -nCelly 64 -solver cg -nl nr -c0 5. -tau 1. -r .3
+# TODO: change omp_set_num_threads() in solvers.cpp for each run
+# mpirun -n 8 ./solvers -nPEx 2 -nPEy 4 -nCellx 45 -nCelly 45 -solver cg -nl nr -c0 5. -tau 1. -r .3 # 2 threads, 8 ranks
+
+# mpirun -n 4 ./solvers -nPEx 2 -nPEy 2 -nCellx 64 -nCelly 64 -solver cg -nl nr -c0 5. -tau 1. -r .3 # 4 threads, 4 ranks
+
+mpirun -n 2 ./solvers -nPEx 2 -nPEy 1 -nCellx 90 -nCelly 90 -solver cg -nl nr -c0 5. -tau 1. -r .3 # 8 threads, 2 ranks
 
 echo "Done"

@@ -13,5 +13,5 @@
 #set output 'plot.png'
 
 
-splot 'phi_0_0.plt' w l, 
+splot 'phi_0_0.plt' w l, 'phi_1_0.plt' w l, 
 
