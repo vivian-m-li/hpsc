@@ -1,0 +1,16 @@
+- only thing that's new to linear system compared to lab9: minus quarter\*rhoCp on all diagonals in Acoef
+- on the RHS: b[p] = quarter*rhoCP*phi[p]
+  - due to rhoCp\*T_old term in the equation (see notes); phi[p] = T_old
+- if restart is set to 1 then the code will read the restart file
+- time marching loop:
+  - need an MPI barrier at each timestep to make sure everything is in sync
+  - form the linear system
+- new routine called dump.h which we will have to write in lab
+- when doing a dump file, make a decision on which processor writes the boundary nodes
+  - multiple ways to do this; which value gets written depends on what your strategy is
+  - reading process is different from the writing process
+    - the start index of the file read while writing is different than the start index of the file read while reading (the processors have to read the boundary nodes but don't have to write all of them)
+- in the dump file:
+  - "header" information: inputs: dt, nCellx (total in the global grid), nCelly (total in the global grid)... we want to be able to restart with a different number of processes
+  - scalar state variables: simulation time, plot count... how many plots have we written
+  - phi[]
