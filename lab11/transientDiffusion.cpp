@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
    if ( restart )
      {
        MPI_Barrier(MPI_COMM_WORLD);
-       MESH.readRestart (  /* TO-DO in Lab */ );
+       MESH.readRestart (tStart, dt, timeSinceLastPlot, nCellx, nCelly, count, solver, myMPI /* done */ ); // VIVIAN CHECK THIS
      }
 
    for ( double time = tStart ; time <= tEnd ; time += dt )
@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
 	   timeSinceLastPlot = 0.;
 	   
 	   MPI_Barrier(MPI_COMM_WORLD);
-	   MESH.writeRestart( /* TO-DO in LAB */ );
+	   MESH.writeRestart(time, dt, timeSinceLastPlot, nCellx, nCelly, count, solver, myMPI /* done */ );
 
 	   ++count;
 	 }

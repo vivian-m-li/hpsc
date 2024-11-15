@@ -55,8 +55,8 @@ void writeRestart(double &time             ,
    //    [2] Time since last plot was written
    
    headerDbls[0] = time;
-   headerDbls[1] = /* TO-DO in Lab */  ;
-   headerDbls[2] = /* TO-DO in Lab */  ;
+   headerDbls[1] = dt /* done */  ;
+   headerDbls[2] = timeSinceLastPlot /* done */  ;
 
    // (B) Integers variables to be saved in the dump:
    //
@@ -65,17 +65,17 @@ void writeRestart(double &time             ,
    //    [2] An integer reflection the choice of linear solver
    //    [3] The number of plots files already written
    
-   headerInts[0] = /* TO-DO in Lab -- total number of cells (x-direction) in global problem */;
-   headerInts[1] = /* TO-DO in Lab -- total number of cells (y-direction) in global problem */;
+   headerInts[0] = nCellx * myMPI.nPEx /* done -- total number of cells (x-direction) in global problem */;
+   headerInts[1] = nCelly * myMPI.nPEy  /* done -- total number of cells (y-direction) in global problem */;
    
    if ( solver == "jacobi" ) headerInts[2] = 1;   
    if ( solver == "cg"     ) headerInts[2] = 2;   
 
-   headerInts[3] = /* TO-DO in Lab -- current plot counter*/;
+   headerInts[3] = count /* done -- current plot counter*/;
    
    // Write the dump
 
-   write_mpiio_dump(   /*  TO-DO in Lab */);
+   write_mpiio_dump(headerDbls, headerInts, myMPI /*  done */);
 }
 
 
@@ -100,7 +100,7 @@ void readRestart(double &time             ,
 
    // Read the dump
 
-   read_mpiio_dump( /* TO-DO in Lab */ ); 
+   read_mpiio_dump( headerDbls, headerInts, myMPI /*  done */ ); 
 
    // ----------------------------------------------------------------------------------------------------
    // Retrieve simulation setup variables and a few scalar state variables from arrays
@@ -112,9 +112,9 @@ void readRestart(double &time             ,
    //    [1] Time step
    //    [2] Time since last plot was written
 
-   time              = headerDbls[/* TO-DO in Lab */ ] ;
-   dt                = headerDbls[/* TO-DO in Lab */ ] ;
-   timeSinceLastPlot = headerDbls[/* TO-DO in Lab */ ] ;
+   time              = headerDbls[0 /* done */ ] ;
+   dt                = headerDbls[1 /* done */ ] ;
+   timeSinceLastPlot = headerDbls[2 /* done */ ] ;
 
    
    // (B) Integers variables to be saved in the dump:
@@ -125,7 +125,7 @@ void readRestart(double &time             ,
    //    [3] The number of plots files already written
    
    nCellx = headerInts[0] / myMPI.nPEx         ; 
-   nCelly = /* TO-DO in Lab */                 ;   
+   nCelly = headerInts[1] / myMPI.nPEy  /* done */                 ;   
    
    if ( headerInts[2] == 1 ) solver = "jacobi" ; 
    if ( headerInts[2] == 2 ) solver = "cg"     ;
@@ -185,8 +185,8 @@ void write_mpiio_dump(VD &headerDbls , VI &headerInts , mpiInfo &myMPI)
   
   if ( myPE == 0 ) 
     {
-      for ( int i = 0 ; i < headerDbls.size() ; ++i ) write_mpiio_double( /* TO-DO in Lab */ ); 
-      for ( int i = 0 ; i < headerInts.size() ; ++i ) write_mpiio_int   ( /* TO-DO in Lab */ ); 
+      for ( int i = 0 ; i < headerDbls.size() ; ++i ) write_mpiio_double(fh, headerDbls[i], offset /* done */ ); 
+      for ( int i = 0 ; i < headerInts.size() ; ++i ) write_mpiio_int   (fh, headerInts[i], offset /* done */ ); 
     }
   MPI_Bcast( &offset , 1 , MPI_INT , 0 ,  MPI_COMM_WORLD);
   MPI_Barrier(MPI_COMM_WORLD);
@@ -216,8 +216,16 @@ float **A = Array2D_float(nRealx+1, nRealy+1);
   int idxStartThisPE  [2] = { 1        , 1          };  // Index coordinates of the sub-array inside this PE's array, A
   int AsizeThisPE     [2] = { nRealx+1 , nRealy+1   };  // Size of the A array on this PE    
   int sub_AsizeThisPE [2] = { nRealx-1 , nRealy-1   };  // Size of the A-sub-array on this PE
-  if ( iPE == nPEx-1 ) { /*  TO-DO in Lab */   }
-  if ( jPE == nPEy-1 ) { /*  TO-DO in Lab */   }
+  if ( iPE == nPEx-1 ) {
+    idxStartThisPE[0] -= 1;
+    sub_AsizeThisPE[0] += 1;
+    /* done */
+  } // east boundary
+  if ( jPE == nPEy-1 ) {
+    /*  done */
+    idxStartThisPE[1] -= 1;
+    sub_AsizeThisPE[1] += 1;
+    } // north boundary
   
   // Create and commit
   
@@ -307,8 +315,8 @@ void read_mpiio_dump(VD &headerDbls , VI &headerInts , mpiInfo &myMPI)
     MPI_Offset offset = 0; 
     MPI_Status  status;
     
-    for ( int i = 0 ; i < headerDbls.size() ; ++i ) read_mpiio_double( /* TO-DO in Lab */ );
-    for ( int i = 0 ; i < headerInts.size() ; ++i ) read_mpiio_int   ( /* TO-DO in Lab */ );
+    for ( int i = 0 ; i < headerDbls.size() ; ++i ) read_mpiio_double(fh, headerDbls[i], offset /* done */ );
+    for ( int i = 0 ; i < headerInts.size() ; ++i ) read_mpiio_int   (fh, headerInts[i], offset /* done */ );
   
     MPI_Barrier(MPI_COMM_WORLD);
 
@@ -347,8 +355,15 @@ void read_mpiio_dump(VD &headerDbls , VI &headerInts , mpiInfo &myMPI)
 
   // Adjust start index if not at the left/bottom edge
 
-  /* TO-DO in Lab */
-  /* TO-DO in Lab */
+  /* done */
+  /* done */
+
+  if (iPE > 0) { // there is a western neighbor
+    idxStartInGlobal[0] += 1; // ignore the first column of values
+  }
+  if (jPE > 0) { // there is a southern neighbor
+    idxStartInGlobal[1] += 1; // ignore the first row of values
+  }
   
   // Create and commit
 
