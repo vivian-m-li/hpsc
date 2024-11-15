@@ -1,0 +1,221 @@
+Begin execution
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 16 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 4
+             y-direction: 4
+No. Cells in x-direction: 4
+             y-direction: 4
+Linear solver           : jacobi
+End Time                : 0.02
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 0
+
+Plotting at time = 0 Plot ID = 0
+Plotting at time = 0.001 Plot ID = 1
+Plotting at time = 0.002 Plot ID = 2
+Plotting at time = 0.003 Plot ID = 3
+Plotting at time = 0.004 Plot ID = 4
+Plotting at time = 0.005 Plot ID = 5
+Plotting at time = 0.006 Plot ID = 6
+Plotting at time = 0.007 Plot ID = 7
+Plotting at time = 0.008 Plot ID = 8
+Plotting at time = 0.009 Plot ID = 9
+Plotting at time = 0.01 Plot ID = 10
+Plotting at time = 0.011 Plot ID = 11
+Plotting at time = 0.012 Plot ID = 12
+Plotting at time = 0.013 Plot ID = 13
+Plotting at time = 0.014 Plot ID = 14
+Plotting at time = 0.015 Plot ID = 15
+Plotting at time = 0.016 Plot ID = 16
+Plotting at time = 0.017 Plot ID = 17
+Plotting at time = 0.018 Plot ID = 18
+Plotting at time = 0.019 Plot ID = 19
+Execution Completed Successfully
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 9 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 3
+             y-direction: 3
+No. Cells in x-direction: 5
+             y-direction: 5
+Linear solver           : jacobi
+End Time                : 0.04
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 0
+
+Plotting at time = 0 Plot ID = 0
+Plotting at time = 0.001 Plot ID = 1
+Plotting at time = 0.002 Plot ID = 2
+Plotting at time = 0.003 Plot ID = 3
+Plotting at time = 0.004 Plot ID = 4
+Plotting at time = 0.005 Plot ID = 5
+Plotting at time = 0.006 Plot ID = 6
+Plotting at time = 0.007 Plot ID = 7
+Plotting at time = 0.008 Plot ID = 8
+Plotting at time = 0.009 Plot ID = 9
+Plotting at time = 0.01 Plot ID = 10
+Plotting at time = 0.011 Plot ID = 11
+Plotting at time = 0.012 Plot ID = 12
+Plotting at time = 0.013 Plot ID = 13
+Plotting at time = 0.014 Plot ID = 14
+Plotting at time = 0.015 Plot ID = 15
+Plotting at time = 0.016 Plot ID = 16
+Plotting at time = 0.017 Plot ID = 17
+Plotting at time = 0.018 Plot ID = 18
+Plotting at time = 0.019 Plot ID = 19
+Plotting at time = 0.02 Plot ID = 20
+Plotting at time = 0.021 Plot ID = 21
+Plotting at time = 0.022 Plot ID = 22
+Plotting at time = 0.023 Plot ID = 23
+Plotting at time = 0.024 Plot ID = 24
+Plotting at time = 0.025 Plot ID = 25
+Plotting at time = 0.026 Plot ID = 26
+Plotting at time = 0.027 Plot ID = 27
+Plotting at time = 0.028 Plot ID = 28
+Plotting at time = 0.029 Plot ID = 29
+Plotting at time = 0.03 Plot ID = 30
+Plotting at time = 0.031 Plot ID = 31
+Plotting at time = 0.032 Plot ID = 32
+Plotting at time = 0.033 Plot ID = 33
+Plotting at time = 0.034 Plot ID = 34
+Plotting at time = 0.035 Plot ID = 35
+Plotting at time = 0.036 Plot ID = 36
+Plotting at time = 0.037 Plot ID = 37
+Plotting at time = 0.038 Plot ID = 38
+Plotting at time = 0.039 Plot ID = 39
+Execution Completed Successfully
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 13
+             y-direction: 13
+Linear solver           : jacobi
+End Time                : 0.06
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+Plotting at time = 0.039 Plot ID = 39
+Plotting at time = 0.04 Plot ID = 40
+Plotting at time = 0.041 Plot ID = 41
+Plotting at time = 0.042 Plot ID = 42
+Plotting at time = 0.043 Plot ID = 43
+Plotting at time = 0.044 Plot ID = 44
+Plotting at time = 0.045 Plot ID = 45
+Plotting at time = 0.046 Plot ID = 46
+Plotting at time = 0.047 Plot ID = 47
+Plotting at time = 0.048 Plot ID = 48
+Plotting at time = 0.049 Plot ID = 49
+Plotting at time = 0.05 Plot ID = 50
+Plotting at time = 0.051 Plot ID = 51
+Plotting at time = 0.052 Plot ID = 52
+Plotting at time = 0.053 Plot ID = 53
+Plotting at time = 0.054 Plot ID = 54
+Plotting at time = 0.055 Plot ID = 55
+Plotting at time = 0.056 Plot ID = 56
+Plotting at time = 0.057 Plot ID = 57
+Plotting at time = 0.058 Plot ID = 58
+Plotting at time = 0.059 Plot ID = 59
+Execution Completed Successfully
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 16 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 4
+             y-direction: 4
+No. Cells in x-direction: 4
+             y-direction: 4
+Linear solver           : jacobi
+End Time                : 0.1
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+Plotting at time = 0.059 Plot ID = 59
+Plotting at time = 0.06 Plot ID = 60
+Plotting at time = 0.061 Plot ID = 61
+Plotting at time = 0.062 Plot ID = 62
+Plotting at time = 0.063 Plot ID = 63
+Plotting at time = 0.064 Plot ID = 64
+Plotting at time = 0.065 Plot ID = 65
+Plotting at time = 0.066 Plot ID = 66
+Plotting at time = 0.067 Plot ID = 67
+Plotting at time = 0.068 Plot ID = 68
+Plotting at time = 0.069 Plot ID = 69
+Plotting at time = 0.07 Plot ID = 70
+Plotting at time = 0.071 Plot ID = 71
+Plotting at time = 0.072 Plot ID = 72
+Plotting at time = 0.073 Plot ID = 73
+Plotting at time = 0.074 Plot ID = 74
+Plotting at time = 0.075 Plot ID = 75
+Plotting at time = 0.076 Plot ID = 76
+Plotting at time = 0.077 Plot ID = 77
+Plotting at time = 0.078 Plot ID = 78
+Plotting at time = 0.079 Plot ID = 79
+Plotting at time = 0.08 Plot ID = 80
+Plotting at time = 0.081 Plot ID = 81
+Plotting at time = 0.082 Plot ID = 82
+Plotting at time = 0.083 Plot ID = 83
+Plotting at time = 0.084 Plot ID = 84
+Plotting at time = 0.085 Plot ID = 85
+Plotting at time = 0.086 Plot ID = 86
+Plotting at time = 0.087 Plot ID = 87
+Plotting at time = 0.088 Plot ID = 88
+Plotting at time = 0.089 Plot ID = 89
+Plotting at time = 0.09 Plot ID = 90
+Plotting at time = 0.091 Plot ID = 91
+Plotting at time = 0.092 Plot ID = 92
+Plotting at time = 0.093 Plot ID = 93
+Plotting at time = 0.094 Plot ID = 94
+Plotting at time = 0.095 Plot ID = 95
+Plotting at time = 0.096 Plot ID = 96
+Plotting at time = 0.097 Plot ID = 97
+Plotting at time = 0.098 Plot ID = 98
+Plotting at time = 0.099 Plot ID = 99
+Execution Completed Successfully
+python: can't open file '/home/vili4418/hpsc/lab11/./writePlotCmd_py3.py': [Errno 2] No such file or directory
+Done

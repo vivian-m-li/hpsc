@@ -177,7 +177,7 @@ def keepRunning(argv):
         print('Checking on        : ' + exe )
         print
 
-        userName = '501'
+        userName = 'vili4418'
         jobName = exe
     
         psCommand = "ps -elf | grep " + userName + " | grep " + jobName + " | grep -v 'grep' "

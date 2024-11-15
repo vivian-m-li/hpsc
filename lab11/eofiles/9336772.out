@@ -1,0 +1,200 @@
+Begin execution
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 16 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 4
+             y-direction: 4
+No. Cells in x-direction: 4
+             y-direction: 4
+Linear solver           : jacobi
+End Time                : 0.02
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 0
+
+Plotting at time = 0 Plot ID = 0
+Plotting at time = 0.001 Plot ID = 1
+Plotting at time = 0.002 Plot ID = 2
+Plotting at time = 0.003 Plot ID = 3
+Plotting at time = 0.004 Plot ID = 4
+Plotting at time = 0.005 Plot ID = 5
+Plotting at time = 0.006 Plot ID = 6
+Plotting at time = 0.007 Plot ID = 7
+Plotting at time = 0.008 Plot ID = 8
+Plotting at time = 0.009 Plot ID = 9
+Plotting at time = 0.01 Plot ID = 10
+Plotting at time = 0.011 Plot ID = 11
+Plotting at time = 0.012 Plot ID = 12
+Plotting at time = 0.013 Plot ID = 13
+Plotting at time = 0.014 Plot ID = 14
+Plotting at time = 0.015 Plot ID = 15
+Plotting at time = 0.016 Plot ID = 16
+Plotting at time = 0.017 Plot ID = 17
+Plotting at time = 0.018 Plot ID = 18
+Plotting at time = 0.019 Plot ID = 19
+Execution Completed Successfully
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 9 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 3
+             y-direction: 3
+No. Cells in x-direction: 5
+             y-direction: 5
+Linear solver           : jacobi
+End Time                : 0.04
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 0
+
+Plotting at time = 0 Plot ID = 0
+Plotting at time = 0.001 Plot ID = 1
+Plotting at time = 0.002 Plot ID = 2
+Plotting at time = 0.003 Plot ID = 3
+Plotting at time = 0.004 Plot ID = 4
+Plotting at time = 0.005 Plot ID = 5
+Plotting at time = 0.006 Plot ID = 6
+Plotting at time = 0.007 Plot ID = 7
+Plotting at time = 0.008 Plot ID = 8
+Plotting at time = 0.009 Plot ID = 9
+Plotting at time = 0.01 Plot ID = 10
+Plotting at time = 0.011 Plot ID = 11
+Plotting at time = 0.012 Plot ID = 12
+Plotting at time = 0.013 Plot ID = 13
+Plotting at time = 0.014 Plot ID = 14
+Plotting at time = 0.015 Plot ID = 15
+Plotting at time = 0.016 Plot ID = 16
+Plotting at time = 0.017 Plot ID = 17
+Plotting at time = 0.018 Plot ID = 18
+Plotting at time = 0.019 Plot ID = 19
+Plotting at time = 0.02 Plot ID = 20
+Plotting at time = 0.021 Plot ID = 21
+Plotting at time = 0.022 Plot ID = 22
+Plotting at time = 0.023 Plot ID = 23
+Plotting at time = 0.024 Plot ID = 24
+Plotting at time = 0.025 Plot ID = 25
+Plotting at time = 0.026 Plot ID = 26
+Plotting at time = 0.027 Plot ID = 27
+Plotting at time = 0.028 Plot ID = 28
+Plotting at time = 0.029 Plot ID = 29
+Plotting at time = 0.03 Plot ID = 30
+Plotting at time = 0.031 Plot ID = 31
+Plotting at time = 0.032 Plot ID = 32
+Plotting at time = 0.033 Plot ID = 33
+Plotting at time = 0.034 Plot ID = 34
+Plotting at time = 0.035 Plot ID = 35
+Plotting at time = 0.036 Plot ID = 36
+Plotting at time = 0.037 Plot ID = 37
+Plotting at time = 0.038 Plot ID = 38
+Plotting at time = 0.039 Plot ID = 39
+Execution Completed Successfully
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 13
+             y-direction: 13
+Linear solver           : jacobi
+End Time                : 0.06
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+Plotting at time = 0.039 Plot ID = 39
+Plotting at time = 0.04 Plot ID = 40
+Plotting at time = 0.041 Plot ID = 41
+Plotting at time = 0.042 Plot ID = 42
+Plotting at time = 0.043 Plot ID = 43
+Plotting at time = 0.044 Plot ID = 44
+Plotting at time = 0.045 Plot ID = 45
+Plotting at time = 0.046 Plot ID = 46
+Plotting at time = 0.047 Plot ID = 47
+Plotting at time = 0.048 Plot ID = 48
+Plotting at time = 0.049 Plot ID = 49
+Plotting at time = 0.05 Plot ID = 50
+Plotting at time = 0.051 Plot ID = 51
+Plotting at time = 0.052 Plot ID = 52
+Plotting at time = 0.053 Plot ID = 53
+Plotting at time = 0.054 Plot ID = 54
+Plotting at time = 0.055 Plot ID = 55
+Plotting at time = 0.056 Plot ID = 56
+Plotting at time = 0.057 Plot ID = 57
+Plotting at time = 0.058 Plot ID = 58
+Plotting at time = 0.059 Plot ID = 59
+Execution Completed Successfully
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 16 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 4
+             y-direction: 4
+No. Cells in x-direction: 4
+             y-direction: 4
+Linear solver           : jacobi
+End Time                : 0.1
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+Abort(336202764) on node 3 (rank 3 in comm 0): Fatal error in PMPI_Type_create_subarray: Invalid argument, error stack:
+PMPI_Type_create_subarray(316): MPI_Type_create_subarray(ndims=2, array_of_sizes=0x7ffcad24dd34, array_of_subsizes=0x7ffcad24dd18, array_of_starts=0x7ffcad24dd2c, order=56, MPI_FLOAT, newtype=0x7ffcad24dd3c) failed
+PMPI_Type_create_subarray(121): Argument array_of_starts has value 13 but must be within [0,9]
+Abort(67767308) on node 7 (rank 7 in comm 0): Fatal error in PMPI_Type_create_subarray: Invalid argument, error stack:
+PMPI_Type_create_subarray(316): MPI_Type_create_subarray(ndims=2, array_of_sizes=0x7ffd232766f4, array_of_subsizes=0x7ffd232766d8, array_of_starts=0x7ffd232766ec, order=56, MPI_FLOAT, newtype=0x7ffd232766fc) failed
+PMPI_Type_create_subarray(121): Argument array_of_starts has value 13 but must be within [0,9]
+Abort(336202764) on node 11 (rank 11 in comm 0): Fatal error in PMPI_Type_create_subarray: Invalid argument, error stack:
+PMPI_Type_create_subarray(316): MPI_Type_create_subarray(ndims=2, array_of_sizes=0x7ffc3ce15204, array_of_subsizes=0x7ffc3ce151e8, array_of_starts=0x7ffc3ce151fc, order=56, MPI_FLOAT, newtype=0x7ffc3ce1520c) failed
+PMPI_Type_create_subarray(121): Argument array_of_starts has value 13 but must be within [0,9]
+Abort(336202764) on node 12 (rank 12 in comm 0): Fatal error in PMPI_Type_create_subarray: Invalid argument, error stack:
+PMPI_Type_create_subarray(316): MPI_Type_create_subarray(ndims=2, array_of_sizes=0x7ffed3962974, array_of_subsizes=0x7ffed3962958, array_of_starts=0x7ffed396296c, order=56, MPI_FLOAT, newtype=0x7ffed396297c) failed
+PMPI_Type_create_subarray(121): Argument array_of_starts has value 13 but must be within [0,9]
+Abort(1007291404) on node 13 (rank 13 in comm 0): Fatal error in PMPI_Type_create_subarray: Invalid argument, error stack:
+PMPI_Type_create_subarray(316): MPI_Type_create_subarray(ndims=2, array_of_sizes=0x7ffd79b0d4a4, array_of_subsizes=0x7ffd79b0d488, array_of_starts=0x7ffd79b0d49c, order=56, MPI_FLOAT, newtype=0x7ffd79b0d4ac) failed
+PMPI_Type_create_subarray(121): Argument array_of_starts has value 13 but must be within [0,9]
+Abort(336202764) on node 14 (rank 14 in comm 0): Fatal error in PMPI_Type_create_subarray: Invalid argument, error stack:
+PMPI_Type_create_subarray(316): MPI_Type_create_subarray(ndims=2, array_of_sizes=0x7ffec28ed704, array_of_subsizes=0x7ffec28ed6e8, array_of_starts=0x7ffec28ed6fc, order=56, MPI_FLOAT, newtype=0x7ffec28ed70c) failed
+PMPI_Type_create_subarray(121): Argument array_of_starts has value 13 but must be within [0,9]
+Abort(873073676) on node 15 (rank 15 in comm 0): Fatal error in PMPI_Type_create_subarray: Invalid argument, error stack:
+PMPI_Type_create_subarray(316): MPI_Type_create_subarray(ndims=2, array_of_sizes=0x7ffcadc94784, array_of_subsizes=0x7ffcadc94768, array_of_starts=0x7ffcadc9477c, order=56, MPI_FLOAT, newtype=0x7ffcadc9478c) failed
+PMPI_Type_create_subarray(121): Argument array_of_starts has value 13 but must be within [0,9]
+/var/spool/slurmd/job9336772/slurm_script: line 31: ./writePlotCmd_py3.py: No such file or directory
+Done

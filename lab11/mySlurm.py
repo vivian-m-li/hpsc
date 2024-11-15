@@ -157,9 +157,9 @@ def mySlurm(argv):
 
         count += 1
 
-        userName = '501'
-        # jobName = 'transientDiffusion'
-        jobName = 'xclock'
+        userName = 'vili4418'
+        jobName = 'transientDiffusion'
+        # jobName = 'xclock'
     
         print
         print ('Iteration             : ' + str(count))
