@@ -1,0 +1,18 @@
+
+EXECUTABLE:
+
+   pathToExe : 'xclock'
+   mpirun    : ''
+      
+ARGUMENTS:
+
+   initial  : ''
+   restart  : ''
+
+
+COMPLETION:
+
+   ttyOutput    : 'myTTYoutput'
+   completionStr: 'Finished successfully'
+
+
