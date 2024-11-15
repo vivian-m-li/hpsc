@@ -1,0 +1,13 @@
+
+rm -rf *.plt
+rm -rf phi_dump.bin
+rm -rf pc_phi_*
+
+make
+
+mpirun --oversubscribe -n 4 ./transientDiffusion -nPEx 2 -nPEy 2 -nCellx  4 -nCelly 4 -solver jacobi -tEnd .0001  -dt .001 -tPlot .001 
+
+
+./sb_py3.py -f phi_dump.bin -x 9 
+
+

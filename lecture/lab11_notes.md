@@ -43,4 +43,3 @@
 - xclock
 - tee tty_out: writes as the command is writing
 - dump.h: get restart capability working in writeRestart - gets called every time we write a gnuplot file and a dump
-  -

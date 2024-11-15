@@ -1,18 +1,11 @@
-
 EXECUTABLE:
+  pathToExe: "xclock"
+  mpirun: ""
 
-   pathToExe : 'xclock'
-   mpirun    : ''
-      
 ARGUMENTS:
-
-   initial  : ''
-   restart  : ''
-
+  initial: "" # put in initial arguments
+  restart: "" # put in restart arguments
 
 COMPLETION:
-
-   ttyOutput    : 'myTTYoutput'
-   completionStr: 'Finished successfully'
-
-
+  ttyOutput: "myTTYoutput"
+  completionStr: "Finished successfully"

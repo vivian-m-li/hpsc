@@ -86,12 +86,12 @@ def timeInSeconds(time_str):
     m2s = 60
 
     tmp = time_str.split(':')
+    # TODO: error here converting time to seconds
 
     if len(tmp) == 1:     return int(time_str)
     if len(tmp) == 2:     return int(tmp[0]) * m2s  + int(tmp[1]) 
     if len(tmp) == 3:     return int(tmp[1]) * h2s  + int(tmp[1]) * m2s + int(tmp[0])
     if len(tmp) == 4:     return int(tmp[2]) * d2s  + int(tmp[1]) * h2s + int(tmp[1]) * m2s + int(tmp[0])
-
 
 # =========================================================================================================
 # =========================================================================================================
@@ -157,8 +157,8 @@ def mySlurm(argv):
 
         count += 1
 
-        userName = 'scott'
-#        jobName = 'transientDiffusion'
+        userName = '501'
+        # jobName = 'transientDiffusion'
         jobName = 'xclock'
     
         print

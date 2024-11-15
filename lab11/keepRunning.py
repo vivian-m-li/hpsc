@@ -166,7 +166,7 @@ def keepRunning(argv):
     count = 0
     while(True):
 
-        os.system('clear')
+        os.system('clear') # TODO: remove this for the lab
 
         count += 1
 
@@ -177,7 +177,7 @@ def keepRunning(argv):
         print('Checking on        : ' + exe )
         print
 
-        userName = 'scott'
+        userName = '501'
         jobName = exe
     
         psCommand = "ps -elf | grep " + userName + " | grep " + jobName + " | grep -v 'grep' "
