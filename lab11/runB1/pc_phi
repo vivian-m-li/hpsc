@@ -1,0 +1,475 @@
+splot \
+"phi_0_0.plt" w l lw 3 , \
+"phi_1_0.plt" w l lw 3 , \
+"phi_10_0.plt" w l lw 3 , \
+"phi_11_0.plt" w l lw 3 , \
+"phi_12_0.plt" w l lw 3 , \
+"phi_13_0.plt" w l lw 3 , \
+"phi_14_0.plt" w l lw 3 , \
+"phi_15_0.plt" w l lw 3 , \
+"phi_2_0.plt" w l lw 3 , \
+"phi_3_0.plt" w l lw 3 , \
+"phi_4_0.plt" w l lw 3 , \
+"phi_5_0.plt" w l lw 3 , \
+"phi_6_0.plt" w l lw 3 , \
+"phi_7_0.plt" w l lw 3 , \
+"phi_8_0.plt" w l lw 3 , \
+"phi_9_0.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_1.plt" w l lw 3 , \
+"phi_1_1.plt" w l lw 3 , \
+"phi_10_1.plt" w l lw 3 , \
+"phi_11_1.plt" w l lw 3 , \
+"phi_12_1.plt" w l lw 3 , \
+"phi_13_1.plt" w l lw 3 , \
+"phi_14_1.plt" w l lw 3 , \
+"phi_15_1.plt" w l lw 3 , \
+"phi_2_1.plt" w l lw 3 , \
+"phi_3_1.plt" w l lw 3 , \
+"phi_4_1.plt" w l lw 3 , \
+"phi_5_1.plt" w l lw 3 , \
+"phi_6_1.plt" w l lw 3 , \
+"phi_7_1.plt" w l lw 3 , \
+"phi_8_1.plt" w l lw 3 , \
+"phi_9_1.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_2.plt" w l lw 3 , \
+"phi_1_2.plt" w l lw 3 , \
+"phi_10_2.plt" w l lw 3 , \
+"phi_11_2.plt" w l lw 3 , \
+"phi_12_2.plt" w l lw 3 , \
+"phi_13_2.plt" w l lw 3 , \
+"phi_14_2.plt" w l lw 3 , \
+"phi_15_2.plt" w l lw 3 , \
+"phi_2_2.plt" w l lw 3 , \
+"phi_3_2.plt" w l lw 3 , \
+"phi_4_2.plt" w l lw 3 , \
+"phi_5_2.plt" w l lw 3 , \
+"phi_6_2.plt" w l lw 3 , \
+"phi_7_2.plt" w l lw 3 , \
+"phi_8_2.plt" w l lw 3 , \
+"phi_9_2.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_3.plt" w l lw 3 , \
+"phi_1_3.plt" w l lw 3 , \
+"phi_10_3.plt" w l lw 3 , \
+"phi_11_3.plt" w l lw 3 , \
+"phi_12_3.plt" w l lw 3 , \
+"phi_13_3.plt" w l lw 3 , \
+"phi_14_3.plt" w l lw 3 , \
+"phi_15_3.plt" w l lw 3 , \
+"phi_2_3.plt" w l lw 3 , \
+"phi_3_3.plt" w l lw 3 , \
+"phi_4_3.plt" w l lw 3 , \
+"phi_5_3.plt" w l lw 3 , \
+"phi_6_3.plt" w l lw 3 , \
+"phi_7_3.plt" w l lw 3 , \
+"phi_8_3.plt" w l lw 3 , \
+"phi_9_3.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_4.plt" w l lw 3 , \
+"phi_1_4.plt" w l lw 3 , \
+"phi_10_4.plt" w l lw 3 , \
+"phi_11_4.plt" w l lw 3 , \
+"phi_12_4.plt" w l lw 3 , \
+"phi_13_4.plt" w l lw 3 , \
+"phi_14_4.plt" w l lw 3 , \
+"phi_15_4.plt" w l lw 3 , \
+"phi_2_4.plt" w l lw 3 , \
+"phi_3_4.plt" w l lw 3 , \
+"phi_4_4.plt" w l lw 3 , \
+"phi_5_4.plt" w l lw 3 , \
+"phi_6_4.plt" w l lw 3 , \
+"phi_7_4.plt" w l lw 3 , \
+"phi_8_4.plt" w l lw 3 , \
+"phi_9_4.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_5.plt" w l lw 3 , \
+"phi_1_5.plt" w l lw 3 , \
+"phi_10_5.plt" w l lw 3 , \
+"phi_11_5.plt" w l lw 3 , \
+"phi_12_5.plt" w l lw 3 , \
+"phi_13_5.plt" w l lw 3 , \
+"phi_14_5.plt" w l lw 3 , \
+"phi_15_5.plt" w l lw 3 , \
+"phi_2_5.plt" w l lw 3 , \
+"phi_3_5.plt" w l lw 3 , \
+"phi_4_5.plt" w l lw 3 , \
+"phi_5_5.plt" w l lw 3 , \
+"phi_6_5.plt" w l lw 3 , \
+"phi_7_5.plt" w l lw 3 , \
+"phi_8_5.plt" w l lw 3 , \
+"phi_9_5.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_6.plt" w l lw 3 , \
+"phi_1_6.plt" w l lw 3 , \
+"phi_10_6.plt" w l lw 3 , \
+"phi_11_6.plt" w l lw 3 , \
+"phi_12_6.plt" w l lw 3 , \
+"phi_13_6.plt" w l lw 3 , \
+"phi_14_6.plt" w l lw 3 , \
+"phi_15_6.plt" w l lw 3 , \
+"phi_2_6.plt" w l lw 3 , \
+"phi_3_6.plt" w l lw 3 , \
+"phi_4_6.plt" w l lw 3 , \
+"phi_5_6.plt" w l lw 3 , \
+"phi_6_6.plt" w l lw 3 , \
+"phi_7_6.plt" w l lw 3 , \
+"phi_8_6.plt" w l lw 3 , \
+"phi_9_6.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_7.plt" w l lw 3 , \
+"phi_1_7.plt" w l lw 3 , \
+"phi_10_7.plt" w l lw 3 , \
+"phi_11_7.plt" w l lw 3 , \
+"phi_12_7.plt" w l lw 3 , \
+"phi_13_7.plt" w l lw 3 , \
+"phi_14_7.plt" w l lw 3 , \
+"phi_15_7.plt" w l lw 3 , \
+"phi_2_7.plt" w l lw 3 , \
+"phi_3_7.plt" w l lw 3 , \
+"phi_4_7.plt" w l lw 3 , \
+"phi_5_7.plt" w l lw 3 , \
+"phi_6_7.plt" w l lw 3 , \
+"phi_7_7.plt" w l lw 3 , \
+"phi_8_7.plt" w l lw 3 , \
+"phi_9_7.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_8.plt" w l lw 3 , \
+"phi_1_8.plt" w l lw 3 , \
+"phi_10_8.plt" w l lw 3 , \
+"phi_11_8.plt" w l lw 3 , \
+"phi_12_8.plt" w l lw 3 , \
+"phi_13_8.plt" w l lw 3 , \
+"phi_14_8.plt" w l lw 3 , \
+"phi_15_8.plt" w l lw 3 , \
+"phi_2_8.plt" w l lw 3 , \
+"phi_3_8.plt" w l lw 3 , \
+"phi_4_8.plt" w l lw 3 , \
+"phi_5_8.plt" w l lw 3 , \
+"phi_6_8.plt" w l lw 3 , \
+"phi_7_8.plt" w l lw 3 , \
+"phi_8_8.plt" w l lw 3 , \
+"phi_9_8.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_9.plt" w l lw 3 , \
+"phi_1_9.plt" w l lw 3 , \
+"phi_10_9.plt" w l lw 3 , \
+"phi_11_9.plt" w l lw 3 , \
+"phi_12_9.plt" w l lw 3 , \
+"phi_13_9.plt" w l lw 3 , \
+"phi_14_9.plt" w l lw 3 , \
+"phi_15_9.plt" w l lw 3 , \
+"phi_2_9.plt" w l lw 3 , \
+"phi_3_9.plt" w l lw 3 , \
+"phi_4_9.plt" w l lw 3 , \
+"phi_5_9.plt" w l lw 3 , \
+"phi_6_9.plt" w l lw 3 , \
+"phi_7_9.plt" w l lw 3 , \
+"phi_8_9.plt" w l lw 3 , \
+"phi_9_9.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_10.plt" w l lw 3 , \
+"phi_1_10.plt" w l lw 3 , \
+"phi_10_10.plt" w l lw 3 , \
+"phi_11_10.plt" w l lw 3 , \
+"phi_12_10.plt" w l lw 3 , \
+"phi_13_10.plt" w l lw 3 , \
+"phi_14_10.plt" w l lw 3 , \
+"phi_15_10.plt" w l lw 3 , \
+"phi_2_10.plt" w l lw 3 , \
+"phi_3_10.plt" w l lw 3 , \
+"phi_4_10.plt" w l lw 3 , \
+"phi_5_10.plt" w l lw 3 , \
+"phi_6_10.plt" w l lw 3 , \
+"phi_7_10.plt" w l lw 3 , \
+"phi_8_10.plt" w l lw 3 , \
+"phi_9_10.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_11.plt" w l lw 3 , \
+"phi_1_11.plt" w l lw 3 , \
+"phi_10_11.plt" w l lw 3 , \
+"phi_11_11.plt" w l lw 3 , \
+"phi_12_11.plt" w l lw 3 , \
+"phi_13_11.plt" w l lw 3 , \
+"phi_14_11.plt" w l lw 3 , \
+"phi_15_11.plt" w l lw 3 , \
+"phi_2_11.plt" w l lw 3 , \
+"phi_3_11.plt" w l lw 3 , \
+"phi_4_11.plt" w l lw 3 , \
+"phi_5_11.plt" w l lw 3 , \
+"phi_6_11.plt" w l lw 3 , \
+"phi_7_11.plt" w l lw 3 , \
+"phi_8_11.plt" w l lw 3 , \
+"phi_9_11.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_12.plt" w l lw 3 , \
+"phi_1_12.plt" w l lw 3 , \
+"phi_10_12.plt" w l lw 3 , \
+"phi_11_12.plt" w l lw 3 , \
+"phi_12_12.plt" w l lw 3 , \
+"phi_13_12.plt" w l lw 3 , \
+"phi_14_12.plt" w l lw 3 , \
+"phi_15_12.plt" w l lw 3 , \
+"phi_2_12.plt" w l lw 3 , \
+"phi_3_12.plt" w l lw 3 , \
+"phi_4_12.plt" w l lw 3 , \
+"phi_5_12.plt" w l lw 3 , \
+"phi_6_12.plt" w l lw 3 , \
+"phi_7_12.plt" w l lw 3 , \
+"phi_8_12.plt" w l lw 3 , \
+"phi_9_12.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_13.plt" w l lw 3 , \
+"phi_1_13.plt" w l lw 3 , \
+"phi_10_13.plt" w l lw 3 , \
+"phi_11_13.plt" w l lw 3 , \
+"phi_12_13.plt" w l lw 3 , \
+"phi_13_13.plt" w l lw 3 , \
+"phi_14_13.plt" w l lw 3 , \
+"phi_15_13.plt" w l lw 3 , \
+"phi_2_13.plt" w l lw 3 , \
+"phi_3_13.plt" w l lw 3 , \
+"phi_4_13.plt" w l lw 3 , \
+"phi_5_13.plt" w l lw 3 , \
+"phi_6_13.plt" w l lw 3 , \
+"phi_7_13.plt" w l lw 3 , \
+"phi_8_13.plt" w l lw 3 , \
+"phi_9_13.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_14.plt" w l lw 3 , \
+"phi_1_14.plt" w l lw 3 , \
+"phi_10_14.plt" w l lw 3 , \
+"phi_11_14.plt" w l lw 3 , \
+"phi_12_14.plt" w l lw 3 , \
+"phi_13_14.plt" w l lw 3 , \
+"phi_14_14.plt" w l lw 3 , \
+"phi_15_14.plt" w l lw 3 , \
+"phi_2_14.plt" w l lw 3 , \
+"phi_3_14.plt" w l lw 3 , \
+"phi_4_14.plt" w l lw 3 , \
+"phi_5_14.plt" w l lw 3 , \
+"phi_6_14.plt" w l lw 3 , \
+"phi_7_14.plt" w l lw 3 , \
+"phi_8_14.plt" w l lw 3 , \
+"phi_9_14.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_15.plt" w l lw 3 , \
+"phi_1_15.plt" w l lw 3 , \
+"phi_10_15.plt" w l lw 3 , \
+"phi_11_15.plt" w l lw 3 , \
+"phi_12_15.plt" w l lw 3 , \
+"phi_13_15.plt" w l lw 3 , \
+"phi_14_15.plt" w l lw 3 , \
+"phi_15_15.plt" w l lw 3 , \
+"phi_2_15.plt" w l lw 3 , \
+"phi_3_15.plt" w l lw 3 , \
+"phi_4_15.plt" w l lw 3 , \
+"phi_5_15.plt" w l lw 3 , \
+"phi_6_15.plt" w l lw 3 , \
+"phi_7_15.plt" w l lw 3 , \
+"phi_8_15.plt" w l lw 3 , \
+"phi_9_15.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_16.plt" w l lw 3 , \
+"phi_1_16.plt" w l lw 3 , \
+"phi_10_16.plt" w l lw 3 , \
+"phi_11_16.plt" w l lw 3 , \
+"phi_12_16.plt" w l lw 3 , \
+"phi_13_16.plt" w l lw 3 , \
+"phi_14_16.plt" w l lw 3 , \
+"phi_15_16.plt" w l lw 3 , \
+"phi_2_16.plt" w l lw 3 , \
+"phi_3_16.plt" w l lw 3 , \
+"phi_4_16.plt" w l lw 3 , \
+"phi_5_16.plt" w l lw 3 , \
+"phi_6_16.plt" w l lw 3 , \
+"phi_7_16.plt" w l lw 3 , \
+"phi_8_16.plt" w l lw 3 , \
+"phi_9_16.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_17.plt" w l lw 3 , \
+"phi_1_17.plt" w l lw 3 , \
+"phi_10_17.plt" w l lw 3 , \
+"phi_11_17.plt" w l lw 3 , \
+"phi_12_17.plt" w l lw 3 , \
+"phi_13_17.plt" w l lw 3 , \
+"phi_14_17.plt" w l lw 3 , \
+"phi_15_17.plt" w l lw 3 , \
+"phi_2_17.plt" w l lw 3 , \
+"phi_3_17.plt" w l lw 3 , \
+"phi_4_17.plt" w l lw 3 , \
+"phi_5_17.plt" w l lw 3 , \
+"phi_6_17.plt" w l lw 3 , \
+"phi_7_17.plt" w l lw 3 , \
+"phi_8_17.plt" w l lw 3 , \
+"phi_9_17.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_18.plt" w l lw 3 , \
+"phi_1_18.plt" w l lw 3 , \
+"phi_10_18.plt" w l lw 3 , \
+"phi_11_18.plt" w l lw 3 , \
+"phi_12_18.plt" w l lw 3 , \
+"phi_13_18.plt" w l lw 3 , \
+"phi_14_18.plt" w l lw 3 , \
+"phi_15_18.plt" w l lw 3 , \
+"phi_2_18.plt" w l lw 3 , \
+"phi_3_18.plt" w l lw 3 , \
+"phi_4_18.plt" w l lw 3 , \
+"phi_5_18.plt" w l lw 3 , \
+"phi_6_18.plt" w l lw 3 , \
+"phi_7_18.plt" w l lw 3 , \
+"phi_8_18.plt" w l lw 3 , \
+"phi_9_18.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_19.plt" w l lw 3 , \
+"phi_1_19.plt" w l lw 3 , \
+"phi_10_19.plt" w l lw 3 , \
+"phi_11_19.plt" w l lw 3 , \
+"phi_12_19.plt" w l lw 3 , \
+"phi_13_19.plt" w l lw 3 , \
+"phi_14_19.plt" w l lw 3 , \
+"phi_15_19.plt" w l lw 3 , \
+"phi_2_19.plt" w l lw 3 , \
+"phi_3_19.plt" w l lw 3 , \
+"phi_4_19.plt" w l lw 3 , \
+"phi_5_19.plt" w l lw 3 , \
+"phi_6_19.plt" w l lw 3 , \
+"phi_7_19.plt" w l lw 3 , \
+"phi_8_19.plt" w l lw 3 , \
+"phi_9_19.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_20.plt" w l lw 3 , \
+"phi_1_20.plt" w l lw 3 , \
+"phi_10_20.plt" w l lw 3 , \
+"phi_11_20.plt" w l lw 3 , \
+"phi_12_20.plt" w l lw 3 , \
+"phi_13_20.plt" w l lw 3 , \
+"phi_14_20.plt" w l lw 3 , \
+"phi_15_20.plt" w l lw 3 , \
+"phi_2_20.plt" w l lw 3 , \
+"phi_3_20.plt" w l lw 3 , \
+"phi_4_20.plt" w l lw 3 , \
+"phi_5_20.plt" w l lw 3 , \
+"phi_6_20.plt" w l lw 3 , \
+"phi_7_20.plt" w l lw 3 , \
+"phi_8_20.plt" w l lw 3 , \
+"phi_9_20.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_21.plt" w l lw 3 , \
+"phi_1_21.plt" w l lw 3 , \
+"phi_10_21.plt" w l lw 3 , \
+"phi_11_21.plt" w l lw 3 , \
+"phi_12_21.plt" w l lw 3 , \
+"phi_13_21.plt" w l lw 3 , \
+"phi_14_21.plt" w l lw 3 , \
+"phi_15_21.plt" w l lw 3 , \
+"phi_2_21.plt" w l lw 3 , \
+"phi_3_21.plt" w l lw 3 , \
+"phi_4_21.plt" w l lw 3 , \
+"phi_5_21.plt" w l lw 3 , \
+"phi_6_21.plt" w l lw 3 , \
+"phi_7_21.plt" w l lw 3 , \
+"phi_8_21.plt" w l lw 3 , \
+"phi_9_21.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_22.plt" w l lw 3 , \
+"phi_1_22.plt" w l lw 3 , \
+"phi_10_22.plt" w l lw 3 , \
+"phi_11_22.plt" w l lw 3 , \
+"phi_12_22.plt" w l lw 3 , \
+"phi_13_22.plt" w l lw 3 , \
+"phi_14_22.plt" w l lw 3 , \
+"phi_15_22.plt" w l lw 3 , \
+"phi_2_22.plt" w l lw 3 , \
+"phi_3_22.plt" w l lw 3 , \
+"phi_4_22.plt" w l lw 3 , \
+"phi_5_22.plt" w l lw 3 , \
+"phi_6_22.plt" w l lw 3 , \
+"phi_7_22.plt" w l lw 3 , \
+"phi_8_22.plt" w l lw 3 , \
+"phi_9_22.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_23.plt" w l lw 3 , \
+"phi_1_23.plt" w l lw 3 , \
+"phi_10_23.plt" w l lw 3 , \
+"phi_11_23.plt" w l lw 3 , \
+"phi_12_23.plt" w l lw 3 , \
+"phi_13_23.plt" w l lw 3 , \
+"phi_14_23.plt" w l lw 3 , \
+"phi_15_23.plt" w l lw 3 , \
+"phi_2_23.plt" w l lw 3 , \
+"phi_3_23.plt" w l lw 3 , \
+"phi_4_23.plt" w l lw 3 , \
+"phi_5_23.plt" w l lw 3 , \
+"phi_6_23.plt" w l lw 3 , \
+"phi_7_23.plt" w l lw 3 , \
+"phi_8_23.plt" w l lw 3 , \
+"phi_9_23.plt" w l lw 3 , \
+
+pause .1
+splot \
+"phi_0_24.plt" w l lw 3 , \
+"phi_1_24.plt" w l lw 3 , \
+"phi_10_24.plt" w l lw 3 , \
+"phi_11_24.plt" w l lw 3 , \
+"phi_12_24.plt" w l lw 3 , \
+"phi_13_24.plt" w l lw 3 , \
+"phi_14_24.plt" w l lw 3 , \
+"phi_15_24.plt" w l lw 3 , \
+"phi_2_24.plt" w l lw 3 , \
+"phi_3_24.plt" w l lw 3 , \
+"phi_4_24.plt" w l lw 3 , \
+"phi_5_24.plt" w l lw 3 , \
+"phi_6_24.plt" w l lw 3 , \
+"phi_7_24.plt" w l lw 3 , \
+"phi_8_24.plt" w l lw 3 , \
+"phi_9_24.plt" w l lw 3 , \
+
+pause .1

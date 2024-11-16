@@ -166,7 +166,7 @@ def keepRunning(argv):
     count = 0
     while(True):
 
-        os.system('clear') # TODO: remove this for the lab
+        # os.system('clear') # TODO: remove this for the lab
 
         count += 1
 
