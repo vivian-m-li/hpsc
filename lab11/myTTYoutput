@@ -1,0 +1,30 @@
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 128
+             y-direction: 128
+Linear solver           : jacobi
+End Time                : 0.05
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+Plotting at time = 0.044 Plot ID = 44
+Plotting at time = 0.045 Plot ID = 45
+Plotting at time = 0.046 Plot ID = 46
+Plotting at time = 0.047 Plot ID = 47
+Plotting at time = 0.048 Plot ID = 48
+Plotting at time = 0.049 Plot ID = 49
+Execution Completed Successfully

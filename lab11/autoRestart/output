@@ -1,0 +1,1386 @@
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 128
+             y-direction: 128
+Linear solver           : jacobi
+End Time                : 0.05
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 0
+
+Plotting at time = 0 Plot ID = 0
+Plotting at time = 0.001 Plot ID = 1
+Plotting at time = 0.002 Plot ID = 2
+Plotting at time = 0.003 Plot ID = 3
+Plotting at time = 0.004 Plot ID = 4
+Plotting at time = 0.005 Plot ID = 5
+Running  ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 | tee myTTYoutput 
+------------------------------------------------------------------
+Iteration          : 1
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 17  80   0 - 93909 -      14:16 pts/22   00:00:00 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 2
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 44  80   0 - 93909 -      14:16 pts/22   00:00:01 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 3
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 58  80   0 - 93909 -      14:16 pts/22   00:00:02 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 4
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 66  80   0 - 94143 -      14:16 pts/22   00:00:03 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 5
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 72  80   0 - 94143 -      14:16 pts/22   00:00:04 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 6
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 76  80   0 - 98239 -      14:16 pts/22   00:00:05 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 7
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 79  80   0 - 98239 -      14:16 pts/22   00:00:06 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 8
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 81  80   0 - 98239 -      14:16 pts/22   00:00:07 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 9
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 83  80   0 - 98239 -      14:16 pts/22   00:00:08 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 10
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 84  80   0 - 98239 -      14:16 pts/22   00:00:09 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 11
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 86  80   0 - 98239 -      14:16 pts/22   00:00:10 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 12
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 86  80   0 - 98239 -      14:16 pts/22   00:00:11 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 13
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 87  80   0 - 98239 -      14:16 pts/22   00:00:12 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 14
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 88  80   0 - 98239 -      14:16 pts/22   00:00:13 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 15
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 89  80   0 - 98239 -      14:16 pts/22   00:00:14 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+Plotting at time = 0.006 Plot ID = 6
+Plotting at time = 0.007 Plot ID = 7
+Plotting at time = 0.008 Plot ID = 8
+Plotting at time = 0.009 Plot ID = 9
+Plotting at time = 0.01 Plot ID = 10
+Plotting at time = 0.011 Plot ID = 11
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 128
+             y-direction: 128
+Linear solver           : jacobi
+End Time                : 0.05
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+------------------------------------------------------------------
+Iteration          : 16
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 84  80   0 - 98239 -      14:16 pts/22   00:00:15 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 17
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 85  80   0 - 98239 -      14:16 pts/22   00:00:16 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 18
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 86  80   0 - 98239 -      14:16 pts/22   00:00:17 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 19
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 87  80   0 - 98239 -      14:16 pts/22   00:00:18 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 20
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 87  80   0 - 98239 -      14:16 pts/22   00:00:19 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 21
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 88  80   0 - 98239 -      14:16 pts/22   00:00:20 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 22
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 88  80   0 - 98239 -      14:16 pts/22   00:00:21 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 23
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 89  80   0 - 98239 -      14:16 pts/22   00:00:22 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 24
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 89  80   0 - 98239 -      14:16 pts/22   00:00:23 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 25
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 90  80   0 - 98239 -      14:16 pts/22   00:00:24 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 26
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 90  80   0 - 98239 -      14:16 pts/22   00:00:25 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 27
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 90  80   0 - 98239 -      14:16 pts/22   00:00:26 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 28
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 91  80   0 - 98239 -      14:16 pts/22   00:00:27 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 29
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1606423       1 91  80   0 - 98239 -      14:16 pts/22   00:00:28 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 30
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+------------------------------------------------------------------
+Iteration          : 31
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+Plotting at time = 0.011 Plot ID = 11
+Plotting at time = 0.012 Plot ID = 12
+Plotting at time = 0.013 Plot ID = 13
+Plotting at time = 0.014 Plot ID = 14
+Plotting at time = 0.015 Plot ID = 15
+Plotting at time = 0.016 Plot ID = 16
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 23  80   0 - 97974 -      14:16 pts/22   00:00:00 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 32
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 40  80   0 - 94074 -      14:16 pts/22   00:00:01 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 33
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 56  80   0 - 94074 -      14:16 pts/22   00:00:02 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 34
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 67  80   0 - 98235 -      14:16 pts/22   00:00:03 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 35
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 73  80   0 - 98235 -      14:16 pts/22   00:00:04 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 36
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 76  80   0 - 98235 -      14:16 pts/22   00:00:05 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 37
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 80  80   0 - 98235 -      14:16 pts/22   00:00:06 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 38
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 82  80   0 - 98235 -      14:16 pts/22   00:00:07 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 39
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 84  80   0 - 98235 -      14:16 pts/22   00:00:08 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 40
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 86  80   0 - 98235 -      14:16 pts/22   00:00:09 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 41
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 87  80   0 - 98235 -      14:16 pts/22   00:00:10 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 42
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 88  80   0 - 98235 -      14:16 pts/22   00:00:11 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 43
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 83  80   0 - 98235 -      14:16 pts/22   00:00:12 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 44
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 84  80   0 - 98235 -      14:16 pts/22   00:00:13 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 45
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 85  80   0 - 98235 -      14:16 pts/22   00:00:14 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 46
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+Plotting at time = 0.017 Plot ID = 17
+Plotting at time = 0.018 Plot ID = 18
+Plotting at time = 0.019 Plot ID = 19
+Plotting at time = 0.02 Plot ID = 20
+Plotting at time = 0.021 Plot ID = 21
+Plotting at time = 0.022 Plot ID = 22
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 128
+             y-direction: 128
+Linear solver           : jacobi
+End Time                : 0.05
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 86  80   0 - 98235 -      14:16 pts/22   00:00:15 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 47
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 86  80   0 - 98235 -      14:16 pts/22   00:00:16 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 48
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 87  80   0 - 98235 -      14:16 pts/22   00:00:17 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 49
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 87  80   0 - 98235 -      14:16 pts/22   00:00:18 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 50
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 88  80   0 - 98235 -      14:16 pts/22   00:00:19 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 51
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 88  80   0 - 98235 -      14:16 pts/22   00:00:20 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 52
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 89  80   0 - 98235 -      14:16 pts/22   00:00:21 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 53
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 90  80   0 - 98235 -      14:16 pts/22   00:00:22 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 54
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 90  80   0 - 98235 -      14:16 pts/22   00:00:23 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 55
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 91  80   0 - 98235 -      14:16 pts/22   00:00:24 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 56
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 91  80   0 - 98235 -      14:16 pts/22   00:00:25 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 57
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 88  80   0 - 98235 -      14:16 pts/22   00:00:26 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 58
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 89  80   0 - 98235 -      14:16 pts/22   00:00:27 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 59
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607547       1 89  80   0 - 98235 -      14:16 pts/22   00:00:28 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 60
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+------------------------------------------------------------------
+Iteration          : 61
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Plotting at time = 0.022 Plot ID = 22
+Plotting at time = 0.023 Plot ID = 23
+Plotting at time = 0.024 Plot ID = 24
+Plotting at time = 0.025 Plot ID = 25
+Plotting at time = 0.026 Plot ID = 26
+Plotting at time = 0.027 Plot ID = 27
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 26  80   0 - 94076 -      14:17 pts/22   00:00:00 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 62
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 65  80   0 - 94076 -      14:17 pts/22   00:00:01 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 63
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 78  80   0 - 94076 -      14:17 pts/22   00:00:02 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 64
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 84  80   0 - 98237 -      14:17 pts/22   00:00:03 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 65
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 87  80   0 - 98237 -      14:17 pts/22   00:00:04 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 66
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 89  80   0 - 98237 -      14:17 pts/22   00:00:05 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 67
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 91  80   0 - 98237 -      14:17 pts/22   00:00:06 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 68
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 92  80   0 - 98237 -      14:17 pts/22   00:00:07 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 69
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 93  80   0 - 98237 -      14:17 pts/22   00:00:08 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 70
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 85  80   0 - 98237 -      14:17 pts/22   00:00:09 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 71
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 86  80   0 - 98237 -      14:17 pts/22   00:00:10 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 72
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 88  80   0 - 98237 -      14:17 pts/22   00:00:11 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 73
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 89  80   0 - 98237 -      14:17 pts/22   00:00:12 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 74
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 89  80   0 - 98237 -      14:17 pts/22   00:00:13 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 75
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 90  80   0 - 98237 -      14:17 pts/22   00:00:14 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 76
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Plotting at time = 0.028 Plot ID = 28
+Plotting at time = 0.029 Plot ID = 29
+Plotting at time = 0.03 Plot ID = 30
+Plotting at time = 0.031 Plot ID = 31
+Plotting at time = 0.032 Plot ID = 32
+Plotting at time = 0.033 Plot ID = 33
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 128
+             y-direction: 128
+Linear solver           : jacobi
+End Time                : 0.05
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 91  80   0 - 98237 -      14:17 pts/22   00:00:15 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 77
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 91  80   0 - 98237 -      14:17 pts/22   00:00:16 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 78
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 92  80   0 - 98237 -      14:17 pts/22   00:00:17 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 79
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 92  80   0 - 98237 -      14:17 pts/22   00:00:18 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 80
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 93  80   0 - 98237 -      14:17 pts/22   00:00:19 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 81
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 93  80   0 - 98237 -      14:17 pts/22   00:00:20 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 82
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 93  80   0 - 98237 -      14:17 pts/22   00:00:21 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 83
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 94  80   0 - 98237 -      14:17 pts/22   00:00:22 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 84
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 90  80   0 - 98237 -      14:17 pts/22   00:00:23 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 85
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 91  80   0 - 98237 -      14:17 pts/22   00:00:24 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 86
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 91  80   0 - 98237 -      14:17 pts/22   00:00:25 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 87
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 91  80   0 - 98237 -      14:17 pts/22   00:00:26 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 88
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 91  80   0 - 98237 -      14:17 pts/22   00:00:27 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 89
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1607936       1 92  80   0 - 98237 -      14:17 pts/22   00:00:28 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 90
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+------------------------------------------------------------------
+Iteration          : 91
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Plotting at time = 0.033 Plot ID = 33
+Plotting at time = 0.034 Plot ID = 34
+Plotting at time = 0.035 Plot ID = 35
+Plotting at time = 0.036 Plot ID = 36
+Plotting at time = 0.037 Plot ID = 37
+Plotting at time = 0.038 Plot ID = 38
+Found this record  : 0 R vili4418 1611962       1 23  80   0 - 97977 -      14:18 pts/22   00:00:00 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 92
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 60  80   0 - 94078 -      14:18 pts/22   00:00:01 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 93
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 74  80   0 - 94078 -      14:18 pts/22   00:00:02 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 94
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 79  80   0 - 98239 -      14:18 pts/22   00:00:03 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 95
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 85  80   0 - 98239 -      14:18 pts/22   00:00:04 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 96
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 87  80   0 - 98239 -      14:18 pts/22   00:00:05 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 97
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 89  80   0 - 98239 -      14:18 pts/22   00:00:06 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 98
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 90  80   0 - 98239 -      14:18 pts/22   00:00:07 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 99
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 92  80   0 - 98239 -      14:18 pts/22   00:00:08 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 100
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 84  80   0 - 98239 -      14:18 pts/22   00:00:09 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 101
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 85  80   0 - 98239 -      14:18 pts/22   00:00:10 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 102
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 86  80   0 - 98239 -      14:18 pts/22   00:00:11 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 103
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 87  80   0 - 98239 -      14:18 pts/22   00:00:12 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 104
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 88  80   0 - 98239 -      14:18 pts/22   00:00:13 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 105
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 89  80   0 - 98239 -      14:18 pts/22   00:00:14 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 106
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Plotting at time = 0.039 Plot ID = 39
+Plotting at time = 0.04 Plot ID = 40
+Plotting at time = 0.041 Plot ID = 41
+Plotting at time = 0.042 Plot ID = 42
+Plotting at time = 0.043 Plot ID = 43
+Plotting at time = 0.044 Plot ID = 44
+
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 128
+             y-direction: 128
+Linear solver           : jacobi
+End Time                : 0.05
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 1
+
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 89  80   0 - 98239 -      14:18 pts/22   00:00:15 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 107
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 90  80   0 - 98239 -      14:18 pts/22   00:00:16 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 108
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 91  80   0 - 98239 -      14:18 pts/22   00:00:17 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 109
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 92  80   0 - 98239 -      14:18 pts/22   00:00:18 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 110
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 92  80   0 - 98239 -      14:18 pts/22   00:00:19 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 111
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 92  80   0 - 98239 -      14:18 pts/22   00:00:20 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 112
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 93  80   0 - 98239 -      14:18 pts/22   00:00:21 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 113
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 93  80   0 - 98239 -      14:18 pts/22   00:00:22 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 114
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 93  80   0 - 98239 -      14:18 pts/22   00:00:23 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 115
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 90  80   0 - 98239 -      14:18 pts/22   00:00:24 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 116
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 90  80   0 - 98239 -      14:18 pts/22   00:00:25 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 117
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 91  80   0 - 98239 -      14:18 pts/22   00:00:26 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 118
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 91  80   0 - 98239 -      14:18 pts/22   00:00:27 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 119
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1611962       1 91  80   0 - 98239 -      14:18 pts/22   00:00:28 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 120
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+------------------------------------------------------------------
+Iteration          : 121
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Plotting at time = 0.044 Plot ID = 44
+Plotting at time = 0.045 Plot ID = 45
+Plotting at time = 0.046 Plot ID = 46
+Plotting at time = 0.047 Plot ID = 47
+Plotting at time = 0.048 Plot ID = 48
+Plotting at time = 0.049 Plot ID = 49
+Execution Completed Successfully
+Found this record  : 0 D vili4418 1612316       1 22  80   0 - 97973 -      14:18 pts/22   00:00:00 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 122
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 60  80   0 - 94042 -      14:18 pts/22   00:00:01 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 123
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 74  80   0 - 94042 -      14:18 pts/22   00:00:02 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 124
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 79  80   0 - 98235 -      14:18 pts/22   00:00:03 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 125
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 84  80   0 - 98235 -      14:18 pts/22   00:00:04 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 126
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 86  80   0 - 98235 -      14:18 pts/22   00:00:05 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 127
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 88  80   0 - 98235 -      14:18 pts/22   00:00:06 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 128
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 89  80   0 - 98235 -      14:18 pts/22   00:00:07 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 129
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 91  80   0 - 98235 -      14:18 pts/22   00:00:08 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 130
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 92  80   0 - 98235 -      14:18 pts/22   00:00:09 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 131
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 92  80   0 - 98235 -      14:18 pts/22   00:00:10 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 132
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 86  80   0 - 98235 -      14:18 pts/22   00:00:11 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 133
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 87  80   0 - 98235 -      14:18 pts/22   00:00:12 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 134
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 0 R vili4418 1612316       1 87  80   0 - 98235 -      14:18 pts/22   00:00:13 ./transientDiffusion -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart
+
+It is still running :-)
+------------------------------------------------------------------
+Iteration          : 135
+Checking on        : ./transientDiffusion
+Searching for this job: ./transientDiffusion
+With this command     : ps -elf | grep vili4418 | grep ./transientDiffusion | grep -v 'grep' 
+Under user name       : vili4418
+Found this record  : 
+It is no longer running.   Checking its tty output to see if it finished.
+It did finish.  This script (keepRunning.py) is now exiting.

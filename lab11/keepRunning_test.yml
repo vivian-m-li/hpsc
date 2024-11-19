@@ -1,11 +1,11 @@
 EXECUTABLE:
-  pathToExe: "transientDiffusion"
-  mpirun: "mpirun -n 9"
+  pathToExe: "./transientDiffusion"
+  mpirun: ""
 
 ARGUMENTS:
-  initial: "-nPEx 3 -nPEy 3 -nCellx 4 -nCelly 4 -solver jacobi -tEnd .02 -dt .001 -tPlot .001 | tee myTTYoutput " # put in initial arguments
-  restart: " -nPEx 3 -nPEy 3 -nCellx 4 -nCelly 4 -solver jacobi -tEnd .02 -dt .001 -tPlot .001 -restart | tee myTTYoutput" # put in restart arguments
+  initial: "-nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 | tee myTTYoutput " # put in initial arguments
+  restart: " -nPEx 1 -nPEy 1 -nCellx 128 -nCelly 128 -solver jacobi -tEnd .05 -dt .001 -tPlot .001 -restart | tee myTTYoutput" # put in restart arguments
 
 COMPLETION:
   ttyOutput: "myTTYoutput"
-  completionStr: "Finished successfully"
+  completionStr: "Execution Completed Successfully"
