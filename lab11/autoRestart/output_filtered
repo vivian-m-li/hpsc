@@ -1,0 +1,354 @@
+------------------------------------------------------
+
+ S O L V E R S                                        
+ D E M O   C O D E                                    
+
+ Running on 1 processors 
+
+------------------------------------------------------
+
+
+Input Summary: 
+--------------------------- 
+No. PE   in  x-direction: 1
+             y-direction: 1
+No. Cells in x-direction: 128
+             y-direction: 128
+Linear solver           : jacobi
+End Time                : 0.05
+Time Step               : 0.001
+Plot Interval           : 0.001
+This is a restart (1/0) : 0
+Plotting at time = 0 Plot ID = 0
+Plotting at time = 0.001 Plot ID = 1
+Plotting at time = 0.002 Plot ID = 2
+Plotting at time = 0.003 Plot ID = 3
+Plotting at time = 0.004 Plot ID = 4
+Plotting at time = 0.005 Plot ID = 5
+Iteration          : 1
+It is still running :-)
+Iteration          : 2
+It is still running :-)
+Iteration          : 3
+It is still running :-)
+Iteration          : 4
+It is still running :-)
+Iteration          : 5
+It is still running :-)
+Iteration          : 6
+It is still running :-)
+Iteration          : 7
+It is still running :-)
+Iteration          : 8
+It is still running :-)
+Iteration          : 9
+It is still running :-)
+Iteration          : 10
+It is still running :-)
+Iteration          : 11
+It is still running :-)
+Iteration          : 12
+It is still running :-)
+Iteration          : 13
+It is still running :-)
+Iteration          : 14
+It is still running :-)
+Iteration          : 15
+It is still running :-)
+Plotting at time = 0.006 Plot ID = 6
+Plotting at time = 0.007 Plot ID = 7
+Plotting at time = 0.008 Plot ID = 8
+Plotting at time = 0.009 Plot ID = 9
+Plotting at time = 0.01 Plot ID = 10
+Plotting at time = 0.011 Plot ID = 11
+This is a restart (1/0) : 1
+Iteration          : 16
+It is still running :-)
+Iteration          : 17
+It is still running :-)
+Iteration          : 18
+It is still running :-)
+Iteration          : 19
+It is still running :-)
+Iteration          : 20
+It is still running :-)
+Iteration          : 21
+It is still running :-)
+Iteration          : 22
+It is still running :-)
+Iteration          : 23
+It is still running :-)
+Iteration          : 24
+It is still running :-)
+Iteration          : 25
+It is still running :-)
+Iteration          : 26
+It is still running :-)
+Iteration          : 27
+It is still running :-)
+Iteration          : 28
+It is still running :-)
+Iteration          : 29
+It is still running :-)
+Iteration          : 30
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+Iteration          : 31
+Plotting at time = 0.011 Plot ID = 11
+Plotting at time = 0.012 Plot ID = 12
+Plotting at time = 0.013 Plot ID = 13
+Plotting at time = 0.014 Plot ID = 14
+Plotting at time = 0.015 Plot ID = 15
+Plotting at time = 0.016 Plot ID = 16
+It is still running :-)
+Iteration          : 32
+It is still running :-)
+Iteration          : 33
+It is still running :-)
+Iteration          : 34
+It is still running :-)
+Iteration          : 35
+It is still running :-)
+Iteration          : 36
+It is still running :-)
+Iteration          : 37
+It is still running :-)
+Iteration          : 38
+It is still running :-)
+Iteration          : 39
+It is still running :-)
+Iteration          : 40
+It is still running :-)
+Iteration          : 41
+It is still running :-)
+Iteration          : 42
+It is still running :-)
+Iteration          : 43
+It is still running :-)
+Iteration          : 44
+It is still running :-)
+Iteration          : 45
+It is still running :-)
+Iteration          : 46
+Plotting at time = 0.017 Plot ID = 17
+Plotting at time = 0.018 Plot ID = 18
+Plotting at time = 0.019 Plot ID = 19
+Plotting at time = 0.02 Plot ID = 20
+Plotting at time = 0.021 Plot ID = 21
+Plotting at time = 0.022 Plot ID = 22
+This is a restart (1/0) : 1
+It is still running :-)
+Iteration          : 47
+It is still running :-)
+Iteration          : 48
+It is still running :-)
+Iteration          : 49
+It is still running :-)
+Iteration          : 50
+It is still running :-)
+Iteration          : 51
+It is still running :-)
+Iteration          : 52
+It is still running :-)
+Iteration          : 53
+It is still running :-)
+Iteration          : 54
+It is still running :-)
+Iteration          : 55
+It is still running :-)
+Iteration          : 56
+It is still running :-)
+Iteration          : 57
+It is still running :-)
+Iteration          : 58
+It is still running :-)
+Iteration          : 59
+It is still running :-)
+Iteration          : 60
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+Iteration          : 61
+Plotting at time = 0.022 Plot ID = 22
+Plotting at time = 0.023 Plot ID = 23
+Plotting at time = 0.024 Plot ID = 24
+Plotting at time = 0.025 Plot ID = 25
+Plotting at time = 0.026 Plot ID = 26
+Plotting at time = 0.027 Plot ID = 27
+It is still running :-)
+Iteration          : 62
+It is still running :-)
+Iteration          : 63
+It is still running :-)
+Iteration          : 64
+It is still running :-)
+Iteration          : 65
+It is still running :-)
+Iteration          : 66
+It is still running :-)
+Iteration          : 67
+It is still running :-)
+Iteration          : 68
+It is still running :-)
+Iteration          : 69
+It is still running :-)
+Iteration          : 70
+It is still running :-)
+Iteration          : 71
+It is still running :-)
+Iteration          : 72
+It is still running :-)
+Iteration          : 73
+It is still running :-)
+Iteration          : 74
+It is still running :-)
+Iteration          : 75
+It is still running :-)
+Iteration          : 76
+Plotting at time = 0.028 Plot ID = 28
+Plotting at time = 0.029 Plot ID = 29
+Plotting at time = 0.03 Plot ID = 30
+Plotting at time = 0.031 Plot ID = 31
+Plotting at time = 0.032 Plot ID = 32
+Plotting at time = 0.033 Plot ID = 33
+This is a restart (1/0) : 1
+It is still running :-)
+Iteration          : 77
+It is still running :-)
+Iteration          : 78
+It is still running :-)
+Iteration          : 79
+It is still running :-)
+Iteration          : 80
+It is still running :-)
+Iteration          : 81
+It is still running :-)
+Iteration          : 82
+It is still running :-)
+Iteration          : 83
+It is still running :-)
+Iteration          : 84
+It is still running :-)
+Iteration          : 85
+It is still running :-)
+Iteration          : 86
+It is still running :-)
+Iteration          : 87
+It is still running :-)
+Iteration          : 88
+It is still running :-)
+Iteration          : 89
+It is still running :-)
+Iteration          : 90
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+Iteration          : 91
+Plotting at time = 0.033 Plot ID = 33
+Plotting at time = 0.034 Plot ID = 34
+Plotting at time = 0.035 Plot ID = 35
+Plotting at time = 0.036 Plot ID = 36
+Plotting at time = 0.037 Plot ID = 37
+Plotting at time = 0.038 Plot ID = 38
+It is still running :-)
+Iteration          : 92
+It is still running :-)
+Iteration          : 93
+It is still running :-)
+Iteration          : 94
+It is still running :-)
+Iteration          : 95
+It is still running :-)
+Iteration          : 96
+It is still running :-)
+Iteration          : 97
+It is still running :-)
+Iteration          : 98
+It is still running :-)
+Iteration          : 99
+It is still running :-)
+Iteration          : 100
+It is still running :-)
+Iteration          : 101
+It is still running :-)
+Iteration          : 102
+It is still running :-)
+Iteration          : 103
+It is still running :-)
+Iteration          : 104
+It is still running :-)
+Iteration          : 105
+It is still running :-)
+Iteration          : 106
+Plotting at time = 0.039 Plot ID = 39
+Plotting at time = 0.04 Plot ID = 40
+Plotting at time = 0.041 Plot ID = 41
+Plotting at time = 0.042 Plot ID = 42
+Plotting at time = 0.043 Plot ID = 43
+Plotting at time = 0.044 Plot ID = 44
+This is a restart (1/0) : 1
+It is still running :-)
+Iteration          : 107
+It is still running :-)
+Iteration          : 108
+It is still running :-)
+Iteration          : 109
+It is still running :-)
+Iteration          : 110
+It is still running :-)
+Iteration          : 111
+It is still running :-)
+Iteration          : 112
+It is still running :-)
+Iteration          : 113
+It is still running :-)
+Iteration          : 114
+It is still running :-)
+Iteration          : 115
+It is still running :-)
+Iteration          : 116
+It is still running :-)
+Iteration          : 117
+It is still running :-)
+Iteration          : 118
+It is still running :-)
+Iteration          : 119
+It is still running :-)
+Iteration          : 120
+It is no longer running.   Checking its tty output to see if it finished.
+It is no longer running.   Restarting it now...
+Iteration          : 121
+Plotting at time = 0.044 Plot ID = 44
+Plotting at time = 0.045 Plot ID = 45
+Plotting at time = 0.046 Plot ID = 46
+Plotting at time = 0.047 Plot ID = 47
+Plotting at time = 0.048 Plot ID = 48
+Plotting at time = 0.049 Plot ID = 49
+It is still running :-)
+Iteration          : 122
+It is still running :-)
+Iteration          : 123
+It is still running :-)
+Iteration          : 124
+It is still running :-)
+Iteration          : 125
+It is still running :-)
+Iteration          : 126
+It is still running :-)
+Iteration          : 127
+It is still running :-)
+Iteration          : 128
+It is still running :-)
+Iteration          : 129
+It is still running :-)
+Iteration          : 130
+It is still running :-)
+Iteration          : 131
+It is still running :-)
+Iteration          : 132
+It is still running :-)
+Iteration          : 133
+It is still running :-)
+Iteration          : 134
+It is still running :-)
+Iteration          : 135
+It is no longer running.   Checking its tty output to see if it finished.
+It did finish.  This script (keepRunning.py) is now exiting.
