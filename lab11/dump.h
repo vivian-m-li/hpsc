@@ -217,14 +217,10 @@ float **A = Array2D_float(nRealx+1, nRealy+1);
   int AsizeThisPE     [2] = { nRealx+1 , nRealy+1   };  // Size of the A array on this PE    
   int sub_AsizeThisPE [2] = { nRealx-1 , nRealy-1   };  // Size of the A-sub-array on this PE
   if ( iPE == nPEx-1 ) {
-    idxStartThisPE[0] -= 1;
-    sub_AsizeThisPE[0] += 1;
-    /* done */
+    sub_AsizeThisPE[0] += 1; /* done */
   } // east boundary
   if ( jPE == nPEy-1 ) {
-    /*  done */
-    idxStartThisPE[1] -= 1;
-    sub_AsizeThisPE[1] += 1;
+    sub_AsizeThisPE[1] += 1; /*  done */
     } // north boundary
   
   // Create and commit
@@ -359,10 +355,12 @@ void read_mpiio_dump(VD &headerDbls , VI &headerInts , mpiInfo &myMPI)
   /* done */
 
   if (iPE > 0) { // there is a western neighbor
-    idxStartInGlobal[0] += 1; // ignore the first column of values
+  // count the number of processors
+  // 
+    idxStartInGlobal[0] -= iPE;
   }
   if (jPE > 0) { // there is a southern neighbor
-    idxStartInGlobal[1] += 1; // ignore the first row of values
+    idxStartInGlobal[1] -= jPE;
   }
   
   // Create and commit
