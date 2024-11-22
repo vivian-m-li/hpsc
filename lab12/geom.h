@@ -14,9 +14,9 @@
 
 void cross( double *v , double *w , double *c )
 {
-  c[0] = v[1] * w[2] - v[2] * w[1] /* TO-DO in Lab */; 
-  c[1] = v[2] * w[0] - v[0] * w[2] /* TO-DO in Lab */; 
-  c[2] = v[0] * w[1] - v[1] * w[0] /* TO-DO in Lab */; 
+  c[0] = v[1] * w[2] - v[2] * w[1] /* done */; // x component of cross product
+  c[1] = v[2] * w[0] - v[0] * w[2] /* done */;   // y component of cross product
+  c[2] = v[0] * w[1] - v[1] * w[0] /* done */; // z component of cross product
   return;
 }
 //  ==
@@ -27,7 +27,7 @@ void cross( double *v , double *w , double *c )
 
 double dot( double *v , double *w )
 {
-  return v[0] * w[0] + v[1] * w[1] + v[2] * w[2] /* TO-DO in Lab */;
+  return v[0] * w[0] + v[1] * w[1] + v[2] * w[2] /* done */; // dot product of v and w
 }
 
 
@@ -51,7 +51,7 @@ int Intersect_LinePlane( double *L0 , double *L , double *p0 , double *n , doubl
 
   // Dot the line's vector with the plane's normal:
   
-  double dotProduct = dot(L, n/* TO-DO in Lab */);
+  double dotProduct = dot(L, n/* done */); // dot product of L and n
 
   if ( fabs(dotProduct) < 1.e-10 ) return -1;
   
@@ -59,13 +59,13 @@ int Intersect_LinePlane( double *L0 , double *L , double *p0 , double *n , doubl
 
   double p0L0[3]; kLOOP p0L0[k] = p0[k] - L0[k]; 
   
-  double d = dot( p0L0 , n ) / dotProduct /* TO-DO in Lab */;
+  double d = dot( p0L0 , n ) / dotProduct /* done */; // scalar distance
 
   // Compute the intersection point
-  
-  xyzInt[0] = L[0] + d * L[0] /* TO-DO in Lab */;
-  xyzInt[1] = L[1] + d * L[1] /* TO-DO in Lab */;
-  xyzInt[2] = L[2] + d * L[2] /* TO-DO in Lab */;
+  // incrementing the point L0 using the vector L
+  xyzInt[0] = L0[0] + d * L[0] /* done */;
+  xyzInt[1] = L0[1] + d * L[1] /* done */;
+  xyzInt[2] = L0[2] + d * L[2] /* done */;
 
   return 1;
 }
@@ -99,13 +99,13 @@ bool insideCorner( double *P , double *A, double *B , double *C )
 
   kLOOP
     {
-      vAB[k] = B[k] - A[k] /* TO-DO in Lab */;
-      vCA[k] = A[k] - C[k] /* TO-DO in Lab */;
-      vAP[k] = P[k] - A[k] /* TO-DO in Lab */;
+      vAB[k] = B[k] - A[k] /* done */; // vector from A -> B
+      vCA[k] = A[k] - C[k] /* done */; // vector from C -> A
+      vAP[k] = P[k] - A[k] /* done */; // vector from A -> P
     }
 
-  double cB[3] ; cross(vAB, vAP, cB /* TO-DO in Lab */ );
-  double cC[3] ; cross(vCA, vAP, cC /* TO-DO in Lab */ );
+  double cB[3] ; cross(vAB, vAP, cB /* done */ ); // cB = vAB x vAP
+  double cC[3] ; cross(vCA, vAP, cC /* done */ ); // cC = vCA x vAP
 
   if ( dot(cB,cC) >= 0 )
     {

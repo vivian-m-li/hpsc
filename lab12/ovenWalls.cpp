@@ -175,19 +175,19 @@ int RayIsBlocked( Cylinder &cSource      ,   // Mesh from which ray is emanating
     {
 
       // Vertices of potential blocker
-      
-      kLOOP Q0[k] = cBlocker.coord[cBlocker.face[blockerFaceID][1] /* TO-DO in Lab */ ][k]; 
-      kLOOP Q1[k] = cBlocker.coord[cBlocker.face[blockerFaceID][2] /* TO-DO in Lab */ ][k]; 
-      kLOOP Q2[k] = cBlocker.coord[cBlocker.face[blockerFaceID][3] /* TO-DO in Lab */ ][k]; 
-      kLOOP Q3[k] = cBlocker.coord[cBlocker.face[blockerFaceID][4] /* TO-DO in Lab */ ][k]; 
+      // coordinates of the face's 4 vertices
+      kLOOP Q0[k] = cBlocker.coord[cBlocker.face[blockerFaceID][1] /* done */ ][k]; 
+      kLOOP Q1[k] = cBlocker.coord[cBlocker.face[blockerFaceID][2] /* done */ ][k]; 
+      kLOOP Q2[k] = cBlocker.coord[cBlocker.face[blockerFaceID][3] /* done */ ][k]; 
+      kLOOP Q3[k] = cBlocker.coord[cBlocker.face[blockerFaceID][4] /* done */ ][k]; 
 
       // Normal of potential blocker
       
-      kLOOP blockerN[k] = cBlocker.normal[blockerFaceID /* TO-DO in Lab */ ][k]; 
+      kLOOP blockerN[k] = cBlocker.normal[blockerFaceID /* done */ ][k]; 
       
       //  Look for intersection
       
-      blocked = LineHitsFace(Ray0, Ray, Q0, Q1, Q2, Q3, blockerN /* TO-DO in Lab */ );
+      blocked = LineHitsFace(Ray0, Ray, Q0, Q1, Q2, Q3, blockerN /* done */ );
 
     }
   
