@@ -1,0 +1,13 @@
+example problem:
+- build on compute node
+- either sinteractive or a bash script
+- just trying to see if we're making progress on the gpu
+
+- compare example2 to example3
+  - array2D_double_acc in example3 (in main.h file)
+  - acc_malloc - reserve memory for the GPU (tell GPU directly to allocate memory, no longer transporting anything)
+  - when looping around boundary conditions, have to tell compiler openACC, these are variables that are device (GPU) pointers
+    - phiOld and phiNew only exist as device pointers, CPU doesn't know anything about phiOld and phiNew
+    - don't bring data back, all done on the GPU
+  - allocate memory locally and on the GPU (with _acc)
+  - if you can get away from 2D arrays and do a 2D array inside a 1D array, the GPU can handle that more efficiently
