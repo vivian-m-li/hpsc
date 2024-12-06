@@ -1,0 +1,8 @@
+ovenWalls
+*~
+*.plt
+*.png
+*.txt
+slurm-*.out
+tty.out
+

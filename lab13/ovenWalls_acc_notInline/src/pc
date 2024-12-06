@@ -1,0 +1,21 @@
+#set term pngcairo font "Arial,12"
+
+#set output 'lab12.png'
+
+#set view 20, 80
+
+splot 'CylA.plt' w l,\
+      'CylB.plt' w l,\
+      'hit.plt' w l lw 4,\
+      'source.plt' w l lw 4,\
+
+
+pause -1
+
+
+splot 'CylA.plt' w l,\
+      'CylB.plt' w l,\
+      'hit_gpu.plt' w l lw 4,\
+      'source.plt' w l lw 4,\
+
+

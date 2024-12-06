@@ -1,0 +1,13 @@
+rm -rf *.plt
+rm -rf *.png
+rm -rf *.txt
+rm -rf myslurm-*.out
+rm -rf cpu.1
+rm -rf gpu.1
+rm -rf cpu
+rm -rf gpu
+
+
+
+
+
