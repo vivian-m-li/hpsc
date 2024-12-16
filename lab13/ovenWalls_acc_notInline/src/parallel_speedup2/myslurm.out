@@ -1,0 +1,12 @@
+==
+||
+|| Begin Execution of ovenWalls in slurm batch script.
+||
+==
+rm: cannot remove 'ovenWalls': No such file or directory
+pgc++ -O3 -acc -gpu=ccnative -std=c++11 ovenWalls.cpp -o ovenWalls 
+==
+||
+|| Execution of ovenWalls in slurm batch script complete.
+||
+==

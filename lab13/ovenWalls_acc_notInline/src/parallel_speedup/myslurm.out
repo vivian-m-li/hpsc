@@ -1,0 +1,22 @@
+==
+||
+|| Begin Execution of ovenWalls in slurm batch script.
+||
+==
+rm: cannot remove 'ovenWalls': No such file or directory
+pgc++ -O3 -acc -gpu=ccnative -std=c++11 ovenWalls.cpp -o ovenWalls 
+"ovenWalls.cpp", line 285: warning: variable "dotProduct" was declared but never referenced [declared_but_not_referenced]
+  	  double dotProduct;
+  	         ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"ovenWalls.cpp", line 286: warning: variable "dotProduct2" was declared but never referenced [declared_but_not_referenced]
+  	  double dotProduct2;
+  	         ^
+
+==
+||
+|| Execution of ovenWalls in slurm batch script complete.
+||
+==

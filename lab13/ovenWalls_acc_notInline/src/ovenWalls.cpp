@@ -263,7 +263,10 @@ int main(int argc, char *argv[])
   StartTimer(t0);
   // =========================================================================================      
 
+  // Move the data transfer process so we don't have to copy the data in each iteration of the loop
+#pragma acc enter data copyin( coordB[ 0:nFieldB+1 ][0:3], faceB[ 0:nFacesB+1 ][0:5], normalB[ 0:nFacesB+1 ][0:3], blocked [ 0:nFacesB+1 ] , Ray[ 0:3], Ray0 [ 0:3] )
 
+#pragma acc parallel loop gang worker
   for ( targetFaceID = 1 ; targetFaceID <= nFacesA ; ++targetFaceID )
     {
       kLOOP Ray [k] = centerA[ targetFaceID ] [k] - Ray0[k];
@@ -281,11 +284,10 @@ int main(int argc, char *argv[])
 
 	  double dotProduct;
 	  double dotProduct2;
-	  
-#pragma acc enter data copyin( coordB[ 0:nFieldB+1 ][0:3], faceB[ 0:nFacesB+1 ][0:5], normalB[ 0:nFacesB+1 ][0:3], blocked [ 0:nFacesB+1 ] , Ray[ 0:3], Ray0 [ 0:3] )
-#pragma acc parallel loop private(  Q0[0:3], Q1[0:3], Q2[0:3], Q3[0:3], xyzInt[0:3], normal[0:3], dotProduct, dotProduct2 ) \
-                          present( coordB [ 0:nFieldB+1 ][0:3], faceB  [ 0:nFacesB+1][0:5], normalB[ 0:nFacesB+1][0:3], blocked[0:nFacesB+1], Ray[0:3], Ray0[0:3] )
-	  
+
+// #pragma acc enter data copyin( coordB[ 0:nFieldB+1 ][0:3], faceB[ 0:nFacesB+1 ][0:5], normalB[ 0:nFacesB+1 ][0:3], blocked [ 0:nFacesB+1 ] , Ray[ 0:3], Ray0 [ 0:3] )
+#pragma acc loop vector private(  Q0[0:3], Q1[0:3], Q2[0:3], Q3[0:3], xyzInt[0:3], normal[0:3], dotProduct, dotProduct2 )
+                        // present( coordB [ 0:nFieldB+1 ][0:3], faceB  [ 0:nFacesB+1][0:5], normalB[ 0:nFacesB+1][0:3], blocked[0:nFacesB+1], Ray[0:3], Ray0[0:3] )
 	  for ( int BID = 1 ; BID <= nFacesB ; ++BID )
 	    {
 	      // Vertices of potential blocker
@@ -303,7 +305,7 @@ int main(int argc, char *argv[])
 
 	      
 	    }
-#pragma acc exit data copyout(blocked [0:nFacesB+1],Ray[0:3],Ray0[0:3])
+// #pragma acc exit data copyout(blocked [0:nFacesB+1],Ray[0:3],Ray0[0:3])
 
 	  int sumBlocked = 0;
 	  for ( int f = 1 ; f <= nFacesB ; ++f ) sumBlocked += blocked[f];
@@ -313,6 +315,8 @@ int main(int argc, char *argv[])
 
     }
 
+// Move data transfer here since we moved copyin outside of the loop
+#pragma acc exit data copyout(blocked [0:nFacesB+1],Ray[0:3],Ray0[0:3])
   
   // =========================================================================================      
   // GPU: Timed 
@@ -330,7 +334,6 @@ int main(int argc, char *argv[])
   // CPU: Timed
   StartTimer(t0);
   // =========================================================================================      
-
 
   for ( targetFaceID = 1 ; targetFaceID <= nFacesA ; ++targetFaceID )
     {

@@ -1,21 +1,14 @@
-#set term pngcairo font "Arial,12"
+#set term pngcairo font 'Arial,12'
 
-#set output 'lab12.png'
+#set output 'lab13.png'
 
 #set view 20, 80
 
-splot 'CylA.plt' w l,\
-      'CylB.plt' w l,\
-      'hit.plt' w l lw 4,\
-      'source.plt' w l lw 4,\
-
-
-pause -1
-
-
-splot 'CylA.plt' w l,\
-      'CylB.plt' w l,\
-      'hit_gpu.plt' w l lw 4,\
-      'source.plt' w l lw 4,\
-
-
+splot 'ctrl/CylA.plt' w l lw 4 linecolor rgb 'green',\
+      'ctrl/CylB.plt' w l lw 4 linecolor rgb 'green',\
+      'ctrl/hit.plt' w l lw 5 linecolor rgb 'blue',\
+      'ctrl/source.plt' w l lw 5 linecolor rgb 'orange',\
+      'combined_speedups/CylA.plt' w l lw 1 linecolor rgb 'violet',\
+      'combined_speedups/CylB.plt' w l lw 1 linecolor rgb 'violet',\
+      'combined_speedups/hit.plt' w l lw 2 linecolor rgb 'yellow',\
+      'combined_speedups/source.plt' w l lw 2 linecolor rgb 'red'
